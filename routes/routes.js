@@ -52,7 +52,12 @@ exports.departures = function (req, res) {
                 } else {
                     console.log(response.statusCode);
                     if (req.params.format === 'json') {
-                        res.send({station:response.statusCode, updated:response.statusCode});
+                        res.send({
+                            station:'fel=' + response.statusCode,
+                            updated:response.statusCode + ':',
+                            northbound:[],
+                            southbound:[]
+                        });
                     } else {
                         res.render('departures');
                     }

@@ -105,6 +105,12 @@ describe('station', function () {
         expect(lib.getCalled('#predecessor')).toEqual('touchend');
     });
 
+    it('should handle 500', function () {
+        var lib = createJqueryMock();
+        var r500 = {station:'fel=500', updated:'500:', northbound:[], southbound:[]};
+        target.setResult(lib, r500);
+    });
+
     it('should show north on click', function () {
         var lib = createJqueryMock();
         target.handleButtonClick(lib, 'north');
