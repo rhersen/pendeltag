@@ -1,14 +1,54 @@
 body {
-    color: #dcdccc;
-    background: #3f3f3f;
+    margin: 5px;
+}
+
+table {
+    width: 310px;
+    font-size: 24px;
+}
+
+@media only screen and (min-width: 480px) {
+    table {
+        width: 235px;
+        font-size: 18px;
+    }
+}
+
+table#northbound {
+    float: left;
+}
+
+table#southbound {
+    float: right;
+}
+
+table#northbound td {
+    background-color: #add8e6;
+}
+
+table#southbound td {
+    background-color: #e6adad;
+}
+
+@media only screen and (min-width: 800px) {
+    table {
+        width: 790px;
+        font-size: 64px;
+    }
+}
+
+@media only screen and (min-width: 1280px) {
+    table {
+        width: 620px;
+        font-size: 48px;
+    }
 }
 
 body.pending {
-    background: #284F28;
+    background: #d3d3d3;
 }
 
 a {
-    color: #93B3A3;
     text-decoration: none;
     font-size: xx-large;
 }
@@ -26,20 +66,6 @@ a {
     color: gray;
     font-style: italic;
     font-size: small;
-}
-
-table {
-    width: 45%;
-    min-width: 250px;
-    font-size: large;
-}
-
-table#northbound {
-    float: left;
-}
-
-table#southbound {
-    float: right;
 }
 
 td.countdown {
