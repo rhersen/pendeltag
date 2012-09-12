@@ -48,6 +48,10 @@ body.pending {
     background: #d3d3d3;
 }
 
+body.pending table#northbound td, body.pending table#southbound td {
+    background-color: #d3d3d3;
+}
+
 a {
     text-decoration: none;
     font-size: xx-large;

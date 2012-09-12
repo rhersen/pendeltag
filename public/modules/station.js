@@ -17,7 +17,6 @@ function setResult(lib, result, currentTimeMillis) {
     updatePending(lib);
     updateHtml();
     updateTable();
-    handleDirection(lib, lib('span#direction').text());
     bindEvent(typeof TouchEvent !== 'undefined');
 
     function updateTimer() {
@@ -65,21 +64,12 @@ function setResult(lib, result, currentTimeMillis) {
     }
 }
 
-function handleButtonClick(lib, c) {
-    lib('span#direction').text(c);
-    handleDirection(lib, c);
-}
-
 function init(lib, id, interval) {
     lib('span#id').text(id);
 
-    lib('button').click(function () {
-        handleButtonClick(lib, lib(this).attr('class'));
-    });
-
     lib('button.clear').click(function () {
         require.clearCache();
-        alert('window width is ' + lib(window).width());
+        alert('pixel ratio is ' + window.devicePixelRatio);
     });
 
     if (interval) {
@@ -105,20 +95,6 @@ function init(lib, id, interval) {
     }
 }
 
-function handleDirection(lib, c) {
-    if (c == 'south') {
-        lib('table.departures tr.northbound').hide();
-    } else {
-        lib('table.departures tr.northbound').show();
-    }
-
-    if (c == 'north') {
-        lib('table.departures tr.southbound').hide();
-    } else {
-        lib('table.departures tr.southbound').show();
-    }
-}
-
 function sendRequest(lib, id) {
     timer.setRequest(new Date().getTime());
     updatePending(lib);
@@ -141,5 +117,4 @@ function sendRequest(lib, id) {
 }
 
 exports.setResult = setResult;
-exports.handleButtonClick = handleButtonClick;
 exports.init = init;

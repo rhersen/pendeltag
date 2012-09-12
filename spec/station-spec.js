@@ -111,26 +111,4 @@ describe('station', function () {
         target.setResult(lib, r500);
     });
 
-    it('should show north on click', function () {
-        var lib = createJqueryMock();
-        target.handleButtonClick(lib, 'north');
-        expect(lib.getCalled('span#direction')).toEqual('north');
-        expect(lib.getCalled('show')).toEqual('table.departures tr.northbound');
-        expect(lib.getCalled('hide')).toEqual('table.departures tr.southbound');
-    });
-
-    it('should show south on click', function () {
-        var lib = createJqueryMock();
-        target.handleButtonClick(lib, 'south');
-        expect(lib.getCalled('span#direction')).toEqual('south');
-        expect(lib.getCalled('show')).toEqual('table.departures tr.southbound');
-        expect(lib.getCalled('hide')).toEqual('table.departures tr.northbound');
-    });
-
-    it('should not hide anything when northsouth is clicked', function () {
-        var lib = createJqueryMock();
-        target.handleButtonClick(lib, 'northsouth');
-        expect(lib.getCalled('span#direction')).toEqual('northsouth');
-        expect(lib.getCalled('hide')).toBeUndefined();
-    });
 });
