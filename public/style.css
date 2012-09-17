@@ -2,44 +2,60 @@ body {
     margin: 5px;
 }
 
-table {
-    width: 310px;
+div#northbound, div#southbound {
+    width: 99%;
+    font-size: 24px;
+}
+
+div.departure span {
     font-size: 24px;
 }
 
 @media only screen and (min-width: 480px) {
-    table {
-        width: 235px;
+    div#northbound, div#southbound {
+        width: 49%;
+        font-size: 18px;
+    }
+
+    div.departure span {
         font-size: 18px;
     }
 }
 
-table#northbound {
+#northbound {
     float: left;
 }
 
-table#southbound {
+#southbound {
     float: right;
 }
 
-table#northbound td {
+div#northbound span {
     background-color: #add8e6;
 }
 
-table#southbound td {
+div#southbound span {
     background-color: #e6adad;
 }
 
 @media only screen and (min-width: 800px) {
-    table {
-        width: 790px;
+    div#northbound, div#southbound {
+        width: 99%;
+        font-size: 64px;
+    }
+
+    div.departure span {
         font-size: 64px;
     }
 }
 
 @media only screen and (min-width: 1280px) {
-    table {
-        width: 620px;
+    div#northbound, div#southbound {
+        width: 49%;
+        font-size: 48px;
+    }
+
+    div.departure span {
         font-size: 48px;
     }
 }
@@ -48,9 +64,18 @@ body.pending {
     background: #d3d3d3;
 }
 
-body.pending table#northbound td, body.pending table#southbound td {
+body.pending div#northbound span, body.pending div#southbound span {
     background-color: #d3d3d3;
 }
+
+div.departure {
+    width: 100%;
+}
+
+div.departure span {
+    width: 33%;
+}
+
 
 a {
     text-decoration: none;
@@ -70,8 +95,4 @@ a {
     color: gray;
     font-style: italic;
     font-size: small;
-}
-
-td.countdown {
-    text-align: right;
 }

@@ -32,22 +32,21 @@ function setResult(lib, result, currentTimeMillis) {
     }
 
     function updateTable() {
-        lib('table#northbound tr').remove();
-        lib('table#southbound tr').remove();
-        result.northbound.forEach(createTableRow('northbound'));
-        result.southbound.forEach(createTableRow('southbound'));
+        lib('div.departure').remove();
+        result.northbound.forEach(createDivRow('northbound'));
+        result.southbound.forEach(createDivRow('southbound'));
     }
 
-    function createTableRow(trClass) {
+    function createDivRow(trClass) {
         return function (departure) {
-            lib('table#' + trClass).append('<tr></tr>');
-            lib('table#' + trClass + ' tr:last').addClass(trClass);
-            lib('table#' + trClass + ' tr:last').append('<td></td>');
-            lib('table#' + trClass + ' tr:last :first-child').html(departure.time);
-            lib('table#' + trClass + ' tr:last').append('<td></td>');
-            lib('table#' + trClass + ' tr:last :last-child').html(names.abbreviate(departure.destination));
-            lib('table#' + trClass + ' tr:last').append('<td></td>');
-            lib('table#' + trClass + ' tr:last td:last').addClass('countdown');
+            lib('div#' + trClass).append('<div></div>');
+            lib('div#' + trClass + ' div:last').addClass('departure');
+            lib('div#' + trClass + ' div:last').append('<span></span>');
+            lib('div#' + trClass + ' div:last :last-child').html(departure.time);
+            lib('div#' + trClass + ' div:last').append('<span></span>');
+            lib('div#' + trClass + ' div:last :last-child').html(names.abbreviate(departure.destination));
+            lib('div#' + trClass + ' div:last').append('<span></span>');
+            lib('div#' + trClass + ' div:last :last-child').addClass('countdown');
         }
     }
 
@@ -87,7 +86,8 @@ function init(lib, id, interval) {
 
         function setCountdowns() {
             var now = new Date();
-            lib('table.departures tr').each(function () {
+
+            lib('div.departure').each(function () {
                 var time = $(this).find(':first-child').html();
                 $(this).find(':last-child').html(countdown.getCountdown(time, now));
             });

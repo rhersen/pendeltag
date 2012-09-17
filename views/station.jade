@@ -7,14 +7,8 @@ div
   span#updated updated
   button.clear(type="clear") ⎚
   span#expired ?
-table.departures#northbound
-  tr
-    td#time time
-    td#destination destination
-table.departures#southbound
-  tr
-    td#time time
-    td#destination destination
+div#northbound
+div#southbound
 script
   require.setModuleRoot(window.location.protocol + '//' + window.location.host + '/modules');
   require.run("main");
