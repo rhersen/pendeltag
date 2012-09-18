@@ -22,8 +22,9 @@ describe('station', function () {
                 },
                 append:function () {
                 },
-                addClass:function (c) {
-                    called[selector] = c;
+                data:function () {
+                },
+                addClass:function () {
                 },
                 bind:function (e) {
                     called[selector] = e;
@@ -53,7 +54,7 @@ describe('station', function () {
     it('should remove all table rows', function () {
         var lib = createJqueryMock();
         target.setResult(lib, fixture);
-        expect(lib.getCalled('remove')).toEqual('table#southbound tr');
+        expect(lib.getCalled('remove')).toEqual('span.countdown');
     });
 
     it('should set station name', function () {
@@ -68,16 +69,10 @@ describe('station', function () {
         expect(lib.getCalled('#updated')).toEqual('21:32');
     });
 
-    it('should set time', function () {
-        var lib = createJqueryMock();
-        target.setResult(lib, fixture);
-        expect(lib.getCalled('table#southbound tr:last :first-child')).toEqual('21:45');
-    });
-
     it('should set southbound station name', function () {
         var lib = createJqueryMock();
         target.setResult(lib, fixture);
-        expect(lib.getCalled('table#southbound tr:last :last-child')).toEqual('Östertälje');
+        expect(lib.getCalled('div#southbound :last-child')).toEqual('Östertälje');
     });
 
     it('should set northbound station name', function () {
@@ -86,8 +81,7 @@ describe('station', function () {
             "northbound":[ {"time":"22:29","destination":"Märsta"} ],
             "southbound":[]
         });
-        expect(lib.getCalled('table#northbound tr:last :last-child')).toEqual('Märsta');
-        expect(lib.getCalled('table#northbound tr:last')).toEqual('northbound');
+        expect(lib.getCalled('div#northbound :last-child')).toEqual('Märsta');
     });
 
     it('should bind mouseup', function () {

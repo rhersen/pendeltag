@@ -7,8 +7,19 @@ div#northbound, div#southbound {
     font-size: 24px;
 }
 
-div.departure span {
-    font-size: 24px;
+span.time {
+    float: left;
+    clear: left;
+    width: 24%;
+}
+
+span.destination {
+    float: left;
+    width: 49%;
+}
+
+span.countdown {
+    float: right;
 }
 
 @media only screen and (min-width: 480px) {
@@ -22,30 +33,20 @@ div.departure span {
     }
 }
 
-#northbound {
+div#northbound {
     float: left;
-}
-
-#southbound {
-    float: right;
-}
-
-div#northbound span {
     background-color: #add8e6;
 }
 
-div#southbound span {
+div#southbound {
+    float: left;
     background-color: #e6adad;
 }
 
 @media only screen and (min-width: 800px) {
     div#northbound, div#southbound {
         width: 99%;
-        font-size: 64px;
-    }
-
-    div.departure span {
-        font-size: 64px;
+        font-size: 56px;
     }
 }
 
