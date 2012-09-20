@@ -2,7 +2,7 @@ require('jsdom');
 var fs = require('fs');
 var sl = require('../sl');
 
-describe('jasmine-node', function() {
+describe('sl', function() {
     it('should handle times with no delay', function() {
         var file = fs.readFileSync('spec/9525.html', 'utf-8');
         sl.extract(file, '../public/modules/jquery-1.6.min.js', function (result) {

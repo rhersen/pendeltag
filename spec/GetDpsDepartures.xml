@@ -1,0 +1,193 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<DPS xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns="http://www1.sl.se/realtidws/">
+  <LatestUpdate>2012-09-20T07:12:57.8457292+02:00</LatestUpdate>
+  <ExecutionTime>00:00:04.0312758</ExecutionTime>
+  <Buses>
+    <DpsBus>
+      <SiteId>9525</SiteId>
+      <StopAreaNumber>70243</StopAreaNumber>
+      <TransportMode>BUS</TransportMode>
+      <StopAreaName>Tullinge station</StopAreaName>
+      <LineNumber>713</LineNumber>
+      <Destination>Visättra sportcenter</Destination>
+      <TimeTabledDateTime>2012-09-20T07:14:00</TimeTabledDateTime>
+      <ExpectedDateTime>2012-09-20T07:14:00</ExpectedDateTime>
+      <DisplayTime>0 min</DisplayTime>
+    </DpsBus>
+    <DpsBus>
+      <SiteId>9525</SiteId>
+      <StopAreaNumber>70243</StopAreaNumber>
+      <TransportMode>BUS</TransportMode>
+      <StopAreaName>Tullinge station</StopAreaName>
+      <LineNumber>713</LineNumber>
+      <Destination>Tumba station</Destination>
+      <TimeTabledDateTime>2012-09-20T07:15:00</TimeTabledDateTime>
+      <ExpectedDateTime>2012-09-20T07:15:00</ExpectedDateTime>
+      <DisplayTime>1 min</DisplayTime>
+    </DpsBus>
+    <DpsBus>
+      <SiteId>9525</SiteId>
+      <StopAreaNumber>70243</StopAreaNumber>
+      <TransportMode>BUS</TransportMode>
+      <StopAreaName>Tullinge station</StopAreaName>
+      <LineNumber>722</LineNumber>
+      <Destination>Huddinge sjukhus</Destination>
+      <TimeTabledDateTime>2012-09-20T07:24:00</TimeTabledDateTime>
+      <ExpectedDateTime>2012-09-20T07:24:00</ExpectedDateTime>
+      <DisplayTime>10 min</DisplayTime>
+    </DpsBus>
+    <DpsBus>
+      <SiteId>9525</SiteId>
+      <StopAreaNumber>70243</StopAreaNumber>
+      <TransportMode>BUS</TransportMode>
+      <StopAreaName>Tullinge station</StopAreaName>
+      <LineNumber>726</LineNumber>
+      <Destination>Fridhemsplan</Destination>
+      <TimeTabledDateTime>2012-09-20T07:27:00</TimeTabledDateTime>
+      <ExpectedDateTime>2012-09-20T07:27:00</ExpectedDateTime>
+      <DisplayTime>13 min</DisplayTime>
+    </DpsBus>
+    <DpsBus>
+      <SiteId>9525</SiteId>
+      <StopAreaNumber>70243</StopAreaNumber>
+      <TransportMode>BUS</TransportMode>
+      <StopAreaName>Tullinge station</StopAreaName>
+      <LineNumber>713</LineNumber>
+      <Destination>Visättra</Destination>
+      <TimeTabledDateTime>2012-09-20T07:29:00</TimeTabledDateTime>
+      <ExpectedDateTime>2012-09-20T07:29:00</ExpectedDateTime>
+      <DisplayTime>15 min</DisplayTime>
+    </DpsBus>
+    <DpsBus>
+      <SiteId>9525</SiteId>
+      <StopAreaNumber>70243</StopAreaNumber>
+      <TransportMode>BUS</TransportMode>
+      <StopAreaName>Tullinge station</StopAreaName>
+      <LineNumber>726</LineNumber>
+      <Destination>Tumba station</Destination>
+      <TimeTabledDateTime>2012-09-20T07:31:00</TimeTabledDateTime>
+      <ExpectedDateTime>2012-09-20T07:35:39</ExpectedDateTime>
+      <DisplayTime>22 min</DisplayTime>
+    </DpsBus>
+    <DpsBus>
+      <SiteId>9525</SiteId>
+      <StopAreaNumber>70243</StopAreaNumber>
+      <TransportMode>BUS</TransportMode>
+      <StopAreaName>Tullinge station</StopAreaName>
+      <LineNumber>721</LineNumber>
+      <Destination>Riksten</Destination>
+      <TimeTabledDateTime>2012-09-20T07:38:00</TimeTabledDateTime>
+      <ExpectedDateTime>2012-09-20T07:38:00</ExpectedDateTime>
+      <DisplayTime>07:38</DisplayTime>
+    </DpsBus>
+    <DpsBus>
+      <SiteId>9525</SiteId>
+      <StopAreaNumber>70243</StopAreaNumber>
+      <TransportMode>BUS</TransportMode>
+      <StopAreaName>Tullinge station</StopAreaName>
+      <LineNumber>723</LineNumber>
+      <Destination>Tullinge kyrka</Destination>
+      <TimeTabledDateTime>2012-09-20T07:39:00</TimeTabledDateTime>
+      <ExpectedDateTime>2012-09-20T07:39:14</ExpectedDateTime>
+      <DisplayTime>26 min</DisplayTime>
+    </DpsBus>
+    <DpsBus>
+      <SiteId>9525</SiteId>
+      <StopAreaNumber>70777</StopAreaNumber>
+      <TransportMode>BUS</TransportMode>
+      <StopAreaName>Tullinge station södra</StopAreaName>
+      <LineNumber>721</LineNumber>
+      <Destination>Tullinge station</Destination>
+      <TimeTabledDateTime>2012-09-20T07:20:00</TimeTabledDateTime>
+      <ExpectedDateTime>2012-09-20T07:19:15</ExpectedDateTime>
+      <DisplayTime>6 min</DisplayTime>
+    </DpsBus>
+    <DpsBus>
+      <SiteId>9525</SiteId>
+      <StopAreaNumber>70777</StopAreaNumber>
+      <TransportMode>BUS</TransportMode>
+      <StopAreaName>Tullinge station södra</StopAreaName>
+      <LineNumber>721</LineNumber>
+      <Destination>Riksten</Destination>
+      <TimeTabledDateTime>2012-09-20T07:42:00</TimeTabledDateTime>
+      <ExpectedDateTime>2012-09-20T07:42:00</ExpectedDateTime>
+      <DisplayTime>07:42</DisplayTime>
+    </DpsBus>
+  </Buses>
+  <Metros/>
+  <Trains>
+    <DpsTrain>
+      <SiteId>9525</SiteId>
+      <StopAreaNumber>0</StopAreaNumber>
+      <TransportMode>TRAIN</TransportMode>
+      <StopAreaName>Tullinge</StopAreaName>
+      <LineNumber>36</LineNumber>
+      <Destination>Södertälje hamn</Destination>
+      <TimeTabledDateTime>2012-09-20T07:18:00</TimeTabledDateTime>
+      <ExpectedDateTime>2012-09-20T07:18:42</ExpectedDateTime>
+      <DisplayTime>5 min</DisplayTime>
+      <JourneyDirection>1</JourneyDirection>
+    </DpsTrain>
+    <DpsTrain>
+      <SiteId>9525</SiteId>
+      <StopAreaNumber>0</StopAreaNumber>
+      <TransportMode>TRAIN</TransportMode>
+      <StopAreaName>Tullinge</StopAreaName>
+      <LineNumber>36</LineNumber>
+      <Destination>Östertälje</Destination>
+      <TimeTabledDateTime>2012-09-20T07:33:00</TimeTabledDateTime>
+      <ExpectedDateTime>2012-09-20T07:33:25</ExpectedDateTime>
+      <DisplayTime>20 min</DisplayTime>
+      <JourneyDirection>1</JourneyDirection>
+    </DpsTrain>
+    <DpsTrain>
+      <SiteId>9525</SiteId>
+      <StopAreaNumber>0</StopAreaNumber>
+      <TransportMode>TRAIN</TransportMode>
+      <StopAreaName>Tullinge</StopAreaName>
+      <LineNumber>34</LineNumber>
+      <Destination>Jakobsberg</Destination>
+      <TimeTabledDateTime>2012-09-20T07:22:00</TimeTabledDateTime>
+      <ExpectedDateTime>2012-09-20T07:22:00</ExpectedDateTime>
+      <DisplayTime>8 min</DisplayTime>
+      <JourneyDirection>2</JourneyDirection>
+    </DpsTrain>
+    <DpsTrain>
+      <SiteId>9525</SiteId>
+      <StopAreaNumber>0</StopAreaNumber>
+      <TransportMode>TRAIN</TransportMode>
+      <StopAreaName>Tullinge</StopAreaName>
+      <LineNumber>36</LineNumber>
+      <Destination>Märsta</Destination>
+      <TimeTabledDateTime>2012-09-20T07:26:00</TimeTabledDateTime>
+      <ExpectedDateTime>2012-09-20T07:26:00</ExpectedDateTime>
+      <DisplayTime>07:26</DisplayTime>
+      <JourneyDirection>2</JourneyDirection>
+    </DpsTrain>
+    <DpsTrain>
+      <SiteId>9525</SiteId>
+      <StopAreaNumber>0</StopAreaNumber>
+      <TransportMode>TRAIN</TransportMode>
+      <StopAreaName>Tullinge</StopAreaName>
+      <LineNumber>36</LineNumber>
+      <Destination>Upplands Väsby</Destination>
+      <TimeTabledDateTime>2012-09-20T07:37:00</TimeTabledDateTime>
+      <ExpectedDateTime>2012-09-20T07:37:00</ExpectedDateTime>
+      <DisplayTime>23 min</DisplayTime>
+      <JourneyDirection>2</JourneyDirection>
+    </DpsTrain>
+    <DpsTrain>
+      <SiteId>9525</SiteId>
+      <StopAreaNumber>0</StopAreaNumber>
+      <TransportMode>TRAIN</TransportMode>
+      <StopAreaName>Tullinge</StopAreaName>
+      <LineNumber>36</LineNumber>
+      <Destination>Märsta</Destination>
+      <TimeTabledDateTime>2012-09-20T07:41:00</TimeTabledDateTime>
+      <ExpectedDateTime>2012-09-20T07:41:00</ExpectedDateTime>
+      <DisplayTime>07:41</DisplayTime>
+      <JourneyDirection>2</JourneyDirection>
+    </DpsTrain>
+  </Trains>
+  <Trams/>
+</DPS>

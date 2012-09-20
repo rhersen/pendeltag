@@ -4,7 +4,7 @@ const CENTRALEN = 9001;
 
 var request = require('request');
 
-var sl = require('../sl');
+var trafiklab = require('../trafiklab');
 exports.index = function (req, res) {
     res.render('index', {
         title:'SL',
@@ -48,7 +48,15 @@ exports.departures = function (req, res) {
                 console.log(error.message);
             } else {
                 if (response.statusCode === 200) {
-                    sl.extract(body, 'public/modules/jquery-1.6.min.js', req.params.format === 'json' ? sendJson : sendHtml, res);
+                    trafiklab.extract(body, 'public/modules/jquery-1.6.min.js', req.params.format === 'json' ? sendJson : sendHtml, res);
+                } else if (response.statusCode === 401) {
+                    console.log('Du måste skaffa en nyckel på trafiklab.se och lägga den i key.js');
+                    res.send({
+                        station:'fel=' + response.statusCode,
+                        updated:'API-nyckel saknas.',
+                        northbound:[],
+                        southbound:[]
+                    });
                 } else {
                     console.log(response.statusCode);
                     if (req.params.format === 'json') {
@@ -67,7 +75,7 @@ exports.departures = function (req, res) {
 
     function createParams(stationId) {
         return {
-            uri:sl.getUri(stationId),
+            uri:trafiklab.getUri(stationId),
             headers:{
                 "user-agent":"node.js"
             }
