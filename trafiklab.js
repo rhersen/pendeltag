@@ -17,10 +17,8 @@ exports.extract = function (html, script, done, res) {
         var div = $('LatestUpdate');
 
         function getHhMm(timestamp) {
-            var match = /T([0-9]+):([0-9]+)/.exec(timestamp);
-            var updatedHour = match[1];
-            var updatedMinute = match[2];
-            return updatedHour + ':' + updatedMinute;
+            var match = /T([0-9]+:[0-9]+:[0-9]+)/.exec(timestamp);
+            return match[1];
         }
 
         var updated = getHhMm(div.text());

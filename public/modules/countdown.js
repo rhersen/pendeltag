@@ -1,4 +1,5 @@
 const MINUTES = 60000;
+const SECONDS = 1000;
 const MINUTES_PER_HOUR = 60;
 const HOURS = MINUTES_PER_HOUR * MINUTES;
 const HOURS_PER_DAY = 24;
@@ -10,12 +11,14 @@ function getNow(nowTime) {
 
 function millisSinceMidnight(time) {
     var colon = time.indexOf(':');
-    if (colon < 1) {
+    var colon2 = time.lastIndexOf(':');
+    if (colon < 1 || colon2 < 1) {
         return undefined;
     } else {
         var hour = time.substring(0, colon);
-        var minute = time.substring(colon + 1);
-        return hour * HOURS + minute * MINUTES;
+        var minute = time.substring(colon + 1, colon2);
+        var second = time.substring(colon2 + 1);
+        return hour * HOURS + minute * MINUTES + second * SECONDS;
     }
 }
 

@@ -17,7 +17,7 @@ describe('expiry', function () {
         var target = expiry.create();
         target.setRequest(1320000000);
         target.setResponse(1320005000);
-        target.setUpdated("7:40");
+        target.setUpdated("7:40:00");
         expect(target.isExpired(new Date(1320065000))).toBeTruthy();
     });
 
@@ -25,7 +25,7 @@ describe('expiry', function () {
         var target = expiry.create();
         target.setRequest(1320000000);
         target.setResponse(1320040000);
-        target.setUpdated("7:39");
+        target.setUpdated("7:39:00");
         expect(target.isExpired(new Date(1320045000))).toBeFalsy();
     });
 
@@ -33,7 +33,7 @@ describe('expiry', function () {
         var target = expiry.create();
         target.setRequest(1320000000);
         target.setResponse(1320040000);
-        target.setUpdated("7:39");
+        target.setUpdated("7:39:00");
         expect(target.isExpired(new Date(1320055000))).toBeTruthy();
     });
 
@@ -41,7 +41,7 @@ describe('expiry', function () {
         var target = expiry.create();
         target.setRequest(1320000000);
         target.setResponse(1320001900);
-        target.setUpdated("7:39");
+        target.setUpdated("7:39:00");
         target.setRequest(1320002000);
         expect(target.isExpired(new Date(1320017000))).toBeFalsy();
     });
@@ -51,7 +51,7 @@ describe('expiry', function () {
         target.setRequest(1320000000);
         target.setResponse(1320001900);
         target.setRequest(1320002000);
-        target.setUpdated("7:39");
+        target.setUpdated("7:39:00");
         expect(target.isExpired(new Date(1320042000))).toBeTruthy();
     });
 
@@ -60,7 +60,7 @@ describe('expiry', function () {
         target.setRequest(1320000000);
         target.setResponse(1320001900);
         target.setRequest(1320002000);
-        target.setUpdated("7:40");
+        target.setUpdated("7:40:00");
         expect(target.isExpired(new Date(1320042000))).toBeFalsy();
     });
 
