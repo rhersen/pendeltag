@@ -16,12 +16,12 @@ div#northbound, div#southbound {
 span.time {
     float: left;
     clear: left;
-    width: 25%;
+    width: 33.3%;
 }
 
 span.destination {
     float: left;
-    width: 50%;
+    width: 41.6%;
 }
 
 span.countdown {

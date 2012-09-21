@@ -46,22 +46,22 @@ describe('expiry', function () {
         expect(target.isExpired(new Date(1320017000))).toBeFalsy();
     });
 
-    it('should be expired forty seconds after request', function () {
+    it('should be expired twenty-five seconds after request', function () {
         var target = expiry.create();
         target.setRequest(1320000000);
         target.setResponse(1320001900);
         target.setRequest(1320002000);
         target.setUpdated("7:39:00");
-        expect(target.isExpired(new Date(1320042000))).toBeTruthy();
+        expect(target.isExpired(new Date(1320027000))).toBeTruthy();
     });
 
-    it('should not be expired forty seconds after update', function () {
+    it('should not be expired twenty-five seconds after update', function () {
         var target = expiry.create();
         target.setRequest(1320000000);
         target.setResponse(1320001900);
         target.setRequest(1320002000);
         target.setUpdated("7:40:00");
-        expect(target.isExpired(new Date(1320042000))).toBeFalsy();
+        expect(target.isExpired(new Date(1320027000))).toBeFalsy();
     });
 
     it('should be pending before setRequest', function () {

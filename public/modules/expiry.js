@@ -10,8 +10,8 @@ exports.create = function () {
         return requestTime === undefined || areTimeLimitsReached(date);
 
         function areTimeLimitsReached(date) {
-            return getTimeSinceUpdate(date) > 60000 &&
-                getTimeSinceRequest(date.getTime()) > 30000 &&
+            return getTimeSinceUpdate(date) > 30000 &&
+                getTimeSinceRequest(date.getTime()) > 20000 &&
                 getTimeSinceResponse(date.getTime()) > 10000
         }
     }
