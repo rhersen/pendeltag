@@ -13,60 +13,30 @@ exports.extract = function (html, script, done, res) {
 
     function scrape(window) {
         var $ = window.jQuery;
-        var table = $('Trains');
-        var div = $('LatestUpdate');
-
-        function getHhMm(timestamp) {
-            var match = /T([0-9]+:[0-9]+:[0-9]+)/.exec(timestamp);
-            return match[1];
-        }
-
-        var updated = getHhMm(div.text());
-
-        var departures = [
-            $.map($(table).first().find('DpsTrain:has(JourneyDirection:contains(1))'), createDeparture),
-            $.map($(table).last().find('DpsTrain:has(JourneyDirection:contains(2))'), createDeparture)
-        ];
-
-        var isNorthFirst = false;
+        var trains = $('Trains');
+        var update = $('LatestUpdate');
 
         return {
-            station: table.find('DpsTrain StopAreaName').first().text(),
-            updated: updated,
-            northbound: departures[isNorthFirst ? 0 : 1],
-            southbound: departures[isNorthFirst ? 1 : 0]
+            station: trains.find('DpsTrain StopAreaName').first().text(),
+            updated: getHhMm(update.text()),
+            northbound: $.map(trains.find('DpsTrain:has(JourneyDirection:contains(2))'), createDeparture),
+            southbound: $.map(trains.find('DpsTrain:has(JourneyDirection:contains(1))'), createDeparture)
         };
 
-        function isNorthbound(departure) {
-            return /[BM].[lr]sta/.test(departure.destination);
-        }
-
-        function getMatch(regExp, parent, selector) {
-            var match = regExp.exec(parent.find(selector).text());
-            return match ? match[1] : undefined;
-        }
-
         function createDeparture(e) {
-            var minutes = getChildText(7, e);
-
-            if (/Nu/.exec(minutes)) {
-                minutes = '0 min';
-            }
-
-            var remaining = /([0-9:]+) min/.exec(minutes);
-
             return {
-                time: remaining ? getDepartureTime() : getHhMm(minutes),
+                time: getHhMm(getChildText(7, e)),
                 destination: getChildText(5, e)
             };
-
-            function getDepartureTime() {
-                return (updatedHour + ':' + (1 + parseInt(updatedMinute, 10) + parseInt(remaining[1], 10)));
-            }
 
             function getChildText(i, parent) {
                 return $(parent).children(':eq(' + i + ')').text().trim();
             }
+        }
+
+        function getHhMm(timestamp) {
+            var match = /T([0-9]+:[0-9]+:[0-9]+)/.exec(timestamp);
+            return match[1];
         }
     }
 };
