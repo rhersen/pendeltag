@@ -11,6 +11,10 @@ div#northbound, div#southbound {
     div#northbound, div#southbound {
         width: 50%;
     }
+
+    body {
+        font-size: 18px;
+    }
 }
 
 span.time {
@@ -46,9 +50,15 @@ div#southbound span {
     background-color: #e6adad;
 }
 
-@media only screen and (min-width: 800px) {
+@media only screen and (min-width: 800px) and (orientation: portrait) {
     body {
         font-size: 48px;
+    }
+}
+
+@media only screen and (min-width: 800px) and (orientation: landscape) {
+    body {
+        font-size: 24px;
     }
 }
 
