@@ -1,4 +1,5 @@
 var countdown = require('./countdown');
+var time = require('./time');
 
 exports.create = function () {
     var responseTime;
@@ -10,9 +11,9 @@ exports.create = function () {
         return requestTime === undefined || areTimeLimitsReached(date);
 
         function areTimeLimitsReached(date) {
-            return getTimeSinceUpdate(date) > 30000 &&
-                getTimeSinceRequest(date.getTime()) > 20000 &&
-                getTimeSinceResponse(date.getTime()) > 10000
+            return getTimeSinceUpdate(date) > 30 &&
+                getTimeSinceRequest(date.getTime()) > 20 &&
+                getTimeSinceResponse(date.getTime()) > 10
         }
     }
 
@@ -26,18 +27,18 @@ exports.create = function () {
 
     function getTimeSinceUpdate(date) {
         if (updated) {
-            return countdown.getNow(date) - countdown.millisSinceMidnight(updated);
+            return time.diff(countdown.getNow(date), countdown.millisSinceMidnight(updated));
         } else {
             return '?';
         }
     }
 
     function getTimeSinceRequest(now) {
-        return now - requestTime;
+        return time.diff(now, requestTime);
     }
 
     function getTimeSinceResponse(now) {
-        return now - responseTime;
+        return time.diff(now, responseTime);
     }
 
     function setRequest(currentTimeMillis) {
