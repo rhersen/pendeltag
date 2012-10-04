@@ -14,14 +14,17 @@ exports.extract = function (html, script, done, res) {
     function scrape(window) {
         var $ = window.jQuery;
         var trains = $('Trains');
-        var update = $('LatestUpdate');
 
-        return {
+        var r = {
             station: trains.find('DpsTrain StopAreaName').first().text(),
-            updated: getHhMm(update.text()),
+            updated: getHhMm($('LatestUpdate').text()),
             northbound: $.map(trains.find('DpsTrain:has(JourneyDirection:contains(2))'), createDeparture),
             southbound: $.map(trains.find('DpsTrain:has(JourneyDirection:contains(1))'), createDeparture)
         };
+
+        window.close();
+
+        return r;
 
         function createDeparture(e) {
             return {
