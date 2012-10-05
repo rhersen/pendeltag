@@ -29,7 +29,7 @@ exports.create = function () {
         if (updated) {
             return time.diff(countdown.getNow(date), countdown.millisSinceMidnight(updated));
         } else {
-            return '?';
+            return NaN;
         }
     }
 
@@ -51,9 +51,10 @@ exports.create = function () {
 
     function getDebugString() {
         var now = new Date();
-        return getTimeSinceUpdate(now) + '⊂' +
-            getTimeSinceRequest(now.getTime()) + '⊃' +
-            getTimeSinceResponse(now.getTime());
+        var sinceUpdate = getTimeSinceUpdate(now);
+        var sinceRequest = getTimeSinceRequest(now.getTime());
+        var sinceResponse = getTimeSinceResponse(now.getTime());
+        return sinceUpdate.toFixed(1) + '⊂' + sinceRequest.toFixed(1) + '⊃' + sinceResponse.toFixed(1);
     }
 
     return {
