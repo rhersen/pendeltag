@@ -1,5 +1,5 @@
-function diff(millis1, millis0) {
-    return (millis1 - millis0) / 1000;
+function diff(toMillis, fromMillis) {
+    return (toMillis - fromMillis) / 1000;
 }
 
 exports.diff = diff;

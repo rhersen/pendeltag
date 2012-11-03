@@ -10,14 +10,14 @@ function getNow(nowTime) {
 }
 
 function millisSinceMidnight(time) {
-    var colon = time.indexOf(':');
-    var colon2 = time.lastIndexOf(':');
-    if (colon < 1 || colon2 < 1) {
+    var firstColon = time.indexOf(':');
+    var secondColon = time.lastIndexOf(':');
+    if (firstColon < 1 || secondColon < 1) {
         return undefined;
     } else {
-        var hour = time.substring(0, colon);
-        var minute = time.substring(colon + 1, colon2);
-        var second = time.substring(colon2 + 1);
+        var hour = time.substring(0, firstColon);
+        var minute = time.substring(firstColon + 1, secondColon);
+        var second = time.substring(secondColon + 1);
         return hour * HOURS + minute * MINUTES + second * SECONDS;
     }
 }

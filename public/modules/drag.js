@@ -1,4 +1,4 @@
-var dragState = false;
+var dragState = {};
 var upCallback;
 
 exports.onUp = function (callback) {
