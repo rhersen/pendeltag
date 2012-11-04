@@ -3,24 +3,31 @@ var fs = require('fs');
 var sl = require('../trafiklab');
 
 describe('trafiklab', function() {
-    it('should handle times with no delay', function() {
-        var file = fs.readFileSync('spec/GetDpsDepartures.xml', 'utf-8');
-        sl.extract(file, '../public/modules/jquery-1.6.min.js', function (result) {
-            expect(result.station).toEqual('Tullinge');
-            expect(result.updated).toEqual('07:12:57');
+    it('should handle times', function() {
+        var file = fs.readFileSync('spec/GetDpsDepartures.json', 'utf-8');
+        sl.extract(file, function (result) {
+            expect(result.station).toEqual('Stockholms södra');
+            expect(result.updated).toEqual('20:42:36');
             expect(result.northbound.length).toEqual(4);
-            expect(result.southbound.length).toEqual(2);
-            expect(result.northbound[0].time).toEqual('07:22:00');
-            expect(result.northbound[0].destination).toEqual('Jakobsberg');
-            expect(result.northbound[1].time).toEqual('07:26:00');
-            expect(result.northbound[1].destination).toEqual('Märsta');
-            expect(result.southbound[0].time).toEqual('07:18:42');
-            expect(result.southbound[0].destination).toEqual('Södertälje hamn');
-            expect(result.southbound[1].time).toEqual('07:33:25');
-            expect(result.southbound[1].destination).toEqual('Östertälje');
-            asyncSpecDone();
+            expect(result.southbound.length).toEqual(4);
+            expect(result.northbound[0].time).toEqual('20:44:22');
+            expect(result.northbound[0].destination).toEqual('Märsta');
+            expect(result.northbound[1].time).toEqual('21:07:00');
+            expect(result.northbound[1].destination).toEqual('Bålsta');
+            expect(result.southbound[0].time).toEqual('20:45:00');
+            expect(result.southbound[0].destination).toEqual('Östertälje');
+            expect(result.southbound[1].time).toEqual('20:52:00');
+            expect(result.southbound[1].destination).toEqual('Västerhaninge');
         });
-        asyncSpecWait();
+    });
+
+    it('should handle empty response', function() {
+        var file = fs.readFileSync('spec/empty.json', 'utf-8');
+        sl.extract(file, function (result) {
+            expect(result.updated).toEqual('20:27:23');
+            expect(result.northbound.length).toEqual(0);
+            expect(result.southbound.length).toEqual(0);
+        });
     });
 
 });

@@ -36,52 +36,54 @@ exports.departures = function (req, res) {
 
     console.log('GET departures(' + req.params.id + ') @ ' + new Date());
 
-    request(createParams(req.params.id),
-        function (error, response, body) {
-            var responseTime = new Date().getTime();
-
-            if (response) {
-                console.log(response.statusCode + ' in ' + (responseTime - requestTime) + ' ms');
-            } else {
-                console.log('no response');
-            }
-
-            if (error) {
-                console.log(error.message);
-            } else {
-                if (response.statusCode === 200) {
-                    trafiklab.extract(body, 'public/modules/jquery-1.6.min.js', req.params.format === 'json' ? sendJson : sendHtml, res);
-                } else if (response.statusCode === 401) {
-                    console.log('Du måste skaffa en nyckel på trafiklab.se och lägga den i key.js');
-                    res.send({
-                        station:'fel=' + response.statusCode,
-                        updated:'API-nyckel saknas.',
-                        northbound:[],
-                        southbound:[]
-                    });
-                } else {
-                    console.log(response.statusCode);
-                    if (req.params.format === 'json') {
-                        res.send({
-                            station:'fel=' + response.statusCode,
-                            updated:response.statusCode + ':',
-                            northbound:[],
-                            southbound:[]
-                        });
-                    } else {
-                        res.render('departures');
-                    }
-                }
-            }
-        });
+    request(createParams(req.params.id), handleResponse);
 
     function createParams(stationId) {
         return {
             uri:trafiklab.getUri(stationId),
             headers:{
-                "user-agent":"node.js"
+                "user-agent":"node.js",
+                "accept":"application/json"
             }
         };
+    }
+
+    function handleResponse(error, response, body) {
+        var responseTime = new Date().getTime();
+
+        if (response) {
+            console.log(response.statusCode + ' in ' + (responseTime - requestTime) + ' ms');
+        } else {
+            console.log('no response');
+        }
+
+        if (error) {
+            console.log(error.message);
+        } else {
+            if (response.statusCode === 200) {
+                trafiklab.extract(body, req.params.format === 'json' ? sendJson : sendHtml, res);
+            } else if (response.statusCode === 401) {
+                console.log('Du måste skaffa en nyckel på trafiklab.se och lägga den i key.js');
+                res.send({
+                    station:'fel=' + response.statusCode,
+                    updated:'API-nyckel saknas.',
+                    northbound:[],
+                    southbound:[]
+                });
+            } else {
+                console.log(response.statusCode);
+                if (req.params.format === 'json') {
+                    res.send({
+                        station:'fel=' + response.statusCode,
+                        updated:response.statusCode + ':',
+                        northbound:[],
+                        southbound:[]
+                    });
+                } else {
+                    res.render('departures');
+                }
+            }
+        }
     }
 
     function sendHtml(result, response) {

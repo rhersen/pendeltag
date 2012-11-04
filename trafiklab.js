@@ -1,47 +1,39 @@
-var jsdom = require('jsdom');
 var key = require('./key');
 
-exports.extract = function (html, script, done, res) {
-    var params = {
-        html: html,
-        scripts: [ script ]
-    };
+exports.extract = function (html, done, res) {
+    var parsed = JSON.parse(html);
+        var trains = parsed.DPS.Trains;
 
-    jsdom.env(params, function (err, window) {
-        done(scrape(window), res);
-    });
-
-    function scrape(window) {
-        var $ = window.jQuery;
-        var trains = $('Trains');
-
-        var r = {
-            station: trains.find('DpsTrain StopAreaName').first().text(),
-            updated: getHhMm($('LatestUpdate').text()),
-            northbound: $.map(trains.find('DpsTrain:has(JourneyDirection:contains(2))'), createDeparture),
-            southbound: $.map(trains.find('DpsTrain:has(JourneyDirection:contains(1))'), createDeparture)
+        var r = trains ? {
+            station: trains.DpsTrain[0].StopAreaName,
+            updated: getHhMm(parsed.DPS.LatestUpdate),
+            northbound: trains.DpsTrain.filter(hasDirection(2)).map(createDeparture),
+            southbound: trains.DpsTrain.filter(hasDirection(1)).map(createDeparture)
+        }:
+        {
+            station: '?',
+            updated: getHhMm(parsed.DPS.LatestUpdate),
+            northbound: [],
+            southbound: []
         };
 
-        window.close();
+        done(r, res);
 
-        return r;
+    function hasDirection(dir) {
+        return function (departure) { return departure.JourneyDirection === dir; };
+    }
 
         function createDeparture(e) {
             return {
-                time: getHhMm(getChildText(7, e)),
-                destination: getChildText(5, e)
+                time: getHhMm(e.ExpectedDateTime),
+                destination:e.Destination
             };
-
-            function getChildText(i, parent) {
-                return $(parent).children(':eq(' + i + ')').text().trim();
-            }
         }
 
         function getHhMm(timestamp) {
             var match = /T([0-9]+:[0-9]+:[0-9]+)/.exec(timestamp);
             return match[1];
         }
-    }
 };
 
 exports.getUri = function (id) {
