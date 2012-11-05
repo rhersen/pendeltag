@@ -1,0 +1,11 @@
+{"DPS":{
+    "@xmlnsxsi":"http:\/\/www.w3.org\/2001\/XMLSchema-instance",
+    "@xmlnsxsd":"http:\/\/www.w3.org\/2001\/XMLSchema",
+    "@xmlns":"http:\/\/www1.sl.se\/realtidws\/",
+    "LatestUpdate":"2012-11-04T20:27:23.8642107+01:00",
+    "ExecutionTime":"00:00:00.0312522",
+    "Buses":null,
+    "Metros":null,
+    "Trains":null,
+    "Trams":null
+}}

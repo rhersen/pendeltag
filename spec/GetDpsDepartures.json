@@ -1,0 +1,410 @@
+{"DPS":{
+    "@xmlnsxsi":"http:\/\/www.w3.org\/2001\/XMLSchema-instance",
+    "@xmlnsxsd":"http:\/\/www.w3.org\/2001\/XMLSchema",
+    "@xmlns":"http:\/\/www1.sl.se\/realtidws\/",
+    "LatestUpdate":"2012-11-03T20:42:36.7262978+01:00",
+    "ExecutionTime":"00:00:02.6718579",
+    "Buses":{
+        "DpsBus":[
+            {
+                "SiteId":9530,
+                "StopAreaNumber":10661,
+                "TransportMode":"BLUEBUS",
+                "StopAreaName":"Södra station",
+                "LineNumber":4,
+                "Destination":"Radiohuset",
+                "TimeTabledDateTime":"2012-11-03T20:44:00",
+                "ExpectedDateTime":"2012-11-03T20:43:58",
+                "DisplayTime":"1 min"
+            },
+            {
+                "SiteId":9530,
+                "StopAreaNumber":10661,
+                "TransportMode":"BLUEBUS",
+                "StopAreaName":"Södra station",
+                "LineNumber":4,
+                "Destination":"Radiohuset",
+                "TimeTabledDateTime":"2012-11-03T20:52:00",
+                "ExpectedDateTime":"2012-11-03T20:52:00",
+                "DisplayTime":"9 min"
+            },
+            {
+                "SiteId":9530,
+                "StopAreaNumber":10661,
+                "TransportMode":"BLUEBUS",
+                "StopAreaName":"Södra station",
+                "LineNumber":4,
+                "Destination":"Gullmarsplan",
+                "TimeTabledDateTime":"2012-11-03T20:51:00",
+                "ExpectedDateTime":"2012-11-03T20:54:01",
+                "DisplayTime":"11 min"
+            },
+            {
+                "SiteId":9530,
+                "StopAreaNumber":10661,
+                "TransportMode":"BLUEBUS",
+                "StopAreaName":"Södra station",
+                "LineNumber":4,
+                "Destination":"Radiohuset",
+                "TimeTabledDateTime":"2012-11-03T20:59:00",
+                "ExpectedDateTime":"2012-11-03T20:59:00",
+                "DisplayTime":"16 min"
+            },
+            {
+                "SiteId":9530,
+                "StopAreaNumber":10661,
+                "TransportMode":"BLUEBUS",
+                "StopAreaName":"Södra station",
+                "LineNumber":4,
+                "Destination":"Gullmarsplan",
+                "TimeTabledDateTime":"2012-11-03T20:58:00",
+                "ExpectedDateTime":"2012-11-03T21:01:34",
+                "DisplayTime":"19 min"
+            },
+            {
+                "SiteId":9530,
+                "StopAreaNumber":10661,
+                "TransportMode":"BLUEBUS",
+                "StopAreaName":"Södra station",
+                "LineNumber":4,
+                "Destination":"Gullmarsplan",
+                "TimeTabledDateTime":"2012-11-03T21:06:00",
+                "ExpectedDateTime":"2012-11-03T21:05:50",
+                "DisplayTime":"23 min"
+            },
+            {
+                "SiteId":9530,
+                "StopAreaNumber":10661,
+                "TransportMode":"BLUEBUS",
+                "StopAreaName":"Södra station",
+                "LineNumber":4,
+                "Destination":"Radiohuset",
+                "TimeTabledDateTime":"2012-11-03T21:07:00",
+                "ExpectedDateTime":"2012-11-03T21:07:00",
+                "DisplayTime":"24 min"
+            },
+            {
+                "SiteId":9530,
+                "StopAreaNumber":10661,
+                "TransportMode":"BLUEBUS",
+                "StopAreaName":"Södra station",
+                "LineNumber":4,
+                "Destination":"Gullmarsplan",
+                "TimeTabledDateTime":"2012-11-03T21:13:00",
+                "ExpectedDateTime":"2012-11-03T21:13:37",
+                "DisplayTime":"21:13"
+            },
+            {
+                "SiteId":9530,
+                "StopAreaNumber":10661,
+                "TransportMode":"BLUEBUS",
+                "StopAreaName":"Södra station",
+                "LineNumber":4,
+                "Destination":"Radiohuset",
+                "TimeTabledDateTime":"2012-11-03T21:14:00",
+                "ExpectedDateTime":"2012-11-03T21:14:00",
+                "DisplayTime":"21:14"
+            },
+            {
+                "SiteId":9530,
+                "StopAreaNumber":10661,
+                "TransportMode":"BLUEBUS",
+                "StopAreaName":"Södra station",
+                "LineNumber":4,
+                "Destination":"Gullmarsplan",
+                "TimeTabledDateTime":"2012-11-03T21:21:00",
+                "ExpectedDateTime":"2012-11-03T21:21:00",
+                "DisplayTime":"21:21"
+            },
+            {
+                "SiteId":9530,
+                "StopAreaNumber":10661,
+                "TransportMode":"BLUEBUS",
+                "StopAreaName":"Södra station",
+                "LineNumber":4,
+                "Destination":"Radiohuset",
+                "TimeTabledDateTime":"2012-11-03T21:22:00",
+                "ExpectedDateTime":"2012-11-03T21:22:15",
+                "DisplayTime":"21:22"
+            },
+            {
+                "SiteId":9530,
+                "StopAreaNumber":10661,
+                "TransportMode":"BLUEBUS",
+                "StopAreaName":"Södra station",
+                "LineNumber":4,
+                "Destination":"Gullmarsplan",
+                "TimeTabledDateTime":"2012-11-03T21:28:00",
+                "ExpectedDateTime":"2012-11-03T21:28:00",
+                "DisplayTime":"21:28"
+            },
+            {
+                "SiteId":9530,
+                "StopAreaNumber":10661,
+                "TransportMode":"BLUEBUS",
+                "StopAreaName":"Södra station",
+                "LineNumber":4,
+                "Destination":"Radiohuset",
+                "TimeTabledDateTime":"2012-11-03T21:29:00",
+                "ExpectedDateTime":"2012-11-03T21:29:00",
+                "DisplayTime":"21:29"
+            },
+            {
+                "SiteId":9530,
+                "StopAreaNumber":10661,
+                "TransportMode":"BLUEBUS",
+                "StopAreaName":"Södra station",
+                "LineNumber":4,
+                "Destination":"Gullmarsplan",
+                "TimeTabledDateTime":"2012-11-03T21:36:00",
+                "ExpectedDateTime":"2012-11-03T21:36:00",
+                "DisplayTime":"21:36"
+            },
+            {
+                "SiteId":9530,
+                "StopAreaNumber":10661,
+                "TransportMode":"BLUEBUS",
+                "StopAreaName":"Södra station",
+                "LineNumber":4,
+                "Destination":"Radiohuset",
+                "TimeTabledDateTime":"2012-11-03T21:37:00",
+                "ExpectedDateTime":"2012-11-03T21:37:00",
+                "DisplayTime":"21:37"
+            },
+            {
+                "SiteId":9530,
+                "StopAreaNumber":10763,
+                "TransportMode":"BUS",
+                "StopAreaName":"Södra station",
+                "LineNumber":55,
+                "Destination":"Sofia",
+                "TimeTabledDateTime":"2012-11-03T20:46:00",
+                "ExpectedDateTime":"2012-11-03T20:48:04",
+                "DisplayTime":"5 min"
+            },
+            {
+                "SiteId":9530,
+                "StopAreaNumber":10763,
+                "TransportMode":"BUS",
+                "StopAreaName":"Södra station",
+                "LineNumber":55,
+                "Destination":"Hjorthagen",
+                "TimeTabledDateTime":"2012-11-03T20:49:00",
+                "ExpectedDateTime":"2012-11-03T20:49:04",
+                "DisplayTime":"6 min"
+            },
+            {
+                "SiteId":9530,
+                "StopAreaNumber":10763,
+                "TransportMode":"BUS",
+                "StopAreaName":"Södra station",
+                "LineNumber":66,
+                "Destination":"Sofia",
+                "TimeTabledDateTime":"2012-11-03T20:49:00",
+                "ExpectedDateTime":"2012-11-03T20:50:13",
+                "DisplayTime":"7 min"
+            },
+            {
+                "SiteId":9530,
+                "StopAreaNumber":10763,
+                "TransportMode":"BUS",
+                "StopAreaName":"Södra station",
+                "LineNumber":43,
+                "Destination":"Ruddammen",
+                "TimeTabledDateTime":"2012-11-03T21:04:00",
+                "ExpectedDateTime":"2012-11-03T21:04:00",
+                "DisplayTime":"21 min"
+            },
+            {
+                "SiteId":9530,
+                "StopAreaNumber":10763,
+                "TransportMode":"BUS",
+                "StopAreaName":"Södra station",
+                "LineNumber":43,
+                "Destination":"Tanto",
+                "TimeTabledDateTime":"2012-11-03T21:07:00",
+                "ExpectedDateTime":"2012-11-03T21:07:00",
+                "DisplayTime":"24 min"
+            },
+            {
+                "SiteId":9530,
+                "StopAreaNumber":10763,
+                "TransportMode":"BUS",
+                "StopAreaName":"Södra station",
+                "LineNumber":66,
+                "Destination":"Reimersholme",
+                "TimeTabledDateTime":"2012-11-03T21:10:00",
+                "ExpectedDateTime":"2012-11-03T21:10:00",
+                "DisplayTime":"27 min"
+            },
+            {
+                "SiteId":9530,
+                "StopAreaNumber":10763,
+                "TransportMode":"BUS",
+                "StopAreaName":"Södra station",
+                "LineNumber":55,
+                "Destination":"Sofia",
+                "TimeTabledDateTime":"2012-11-03T21:17:00",
+                "ExpectedDateTime":"2012-11-03T21:17:00",
+                "DisplayTime":"21:17"
+            },
+            {
+                "SiteId":9530,
+                "StopAreaNumber":10763,
+                "TransportMode":"BUS",
+                "StopAreaName":"Södra station",
+                "LineNumber":55,
+                "Destination":"Hjorthagen",
+                "TimeTabledDateTime":"2012-11-03T21:18:00",
+                "ExpectedDateTime":"2012-11-03T21:18:00",
+                "DisplayTime":"21:18"
+            },
+            {
+                "SiteId":9530,
+                "StopAreaNumber":10763,
+                "TransportMode":"BUS",
+                "StopAreaName":"Södra station",
+                "LineNumber":66,
+                "Destination":"Sofia",
+                "TimeTabledDateTime":"2012-11-03T21:19:00",
+                "ExpectedDateTime":"2012-11-03T21:19:00",
+                "DisplayTime":"21:19"
+            },
+            {
+                "SiteId":9530,
+                "StopAreaNumber":10763,
+                "TransportMode":"BUS",
+                "StopAreaName":"Södra station",
+                "LineNumber":43,
+                "Destination":"Ruddammen",
+                "TimeTabledDateTime":"2012-11-03T21:34:00",
+                "ExpectedDateTime":"2012-11-03T21:34:00",
+                "DisplayTime":"21:34"
+            },
+            {
+                "SiteId":9530,
+                "StopAreaNumber":10763,
+                "TransportMode":"BUS",
+                "StopAreaName":"Södra station",
+                "LineNumber":43,
+                "Destination":"Tanto",
+                "TimeTabledDateTime":"2012-11-03T21:35:00",
+                "ExpectedDateTime":"2012-11-03T21:35:00",
+                "DisplayTime":"21:35"
+            },
+            {
+                "SiteId":9530,
+                "StopAreaNumber":10763,
+                "TransportMode":"BUS",
+                "StopAreaName":"Södra station",
+                "LineNumber":66,
+                "Destination":"Reimersholme",
+                "TimeTabledDateTime":"2012-11-03T21:40:00",
+                "ExpectedDateTime":"2012-11-03T21:40:00",
+                "DisplayTime":"21:40"
+            }
+        ]
+    },
+    "Metros":null,
+    "Trains":{
+        "DpsTrain":[
+            {
+                "SiteId":9530,
+                "StopAreaNumber":"0",
+                "TransportMode":"TRAIN",
+                "StopAreaName":"Stockholms södra",
+                "LineNumber":36,
+                "Destination":"Märsta",
+                "TimeTabledDateTime":"2012-11-03T20:44:00",
+                "ExpectedDateTime":"2012-11-03T20:44:22",
+                "DisplayTime":"1 min",
+                "JourneyDirection":2
+            },
+            {
+                "SiteId":9530,
+                "StopAreaNumber":"0",
+                "TransportMode":"TRAIN",
+                "StopAreaName":"Stockholms södra",
+                "LineNumber":35,
+                "Destination":"Bålsta",
+                "TimeTabledDateTime":"2012-11-03T21:07:00",
+                "ExpectedDateTime":"2012-11-03T21:07:00",
+                "DisplayTime":"24 min",
+                "JourneyDirection":2
+            },
+            {
+                "SiteId":9530,
+                "StopAreaNumber":"0",
+                "TransportMode":"TRAIN",
+                "StopAreaName":"Stockholms södra",
+                "LineNumber":36,
+                "Destination":"Märsta",
+                "TimeTabledDateTime":"2012-11-03T21:14:00",
+                "ExpectedDateTime":"2012-11-03T21:14:00",
+                "DisplayTime":"21:14",
+                "JourneyDirection":2
+            },
+            {
+                "SiteId":9530,
+                "StopAreaNumber":"0",
+                "TransportMode":"TRAIN",
+                "StopAreaName":"Stockholms södra",
+                "LineNumber":35,
+                "Destination":"Bålsta",
+                "TimeTabledDateTime":"2012-11-03T21:37:00",
+                "ExpectedDateTime":"2012-11-03T21:37:00",
+                "DisplayTime":"21:37",
+                "JourneyDirection":2
+            },
+            {
+                "SiteId":9530,
+                "StopAreaNumber":"0",
+                "TransportMode":"TRAIN",
+                "StopAreaName":"Stockholms södra",
+                "LineNumber":36,
+                "Destination":"Östertälje",
+                "TimeTabledDateTime":"2012-11-03T20:45:00",
+                "ExpectedDateTime":"2012-11-03T20:45:00",
+                "DisplayTime":"2 min",
+                "JourneyDirection":1
+            },
+            {
+                "SiteId":9530,
+                "StopAreaNumber":"0",
+                "TransportMode":"TRAIN",
+                "StopAreaName":"Stockholms södra",
+                "LineNumber":35,
+                "Destination":"Västerhaninge",
+                "TimeTabledDateTime":"2012-11-03T20:52:00",
+                "ExpectedDateTime":"2012-11-03T20:52:00",
+                "DisplayTime":"9 min",
+                "JourneyDirection":1
+            },
+            {
+                "SiteId":9530,
+                "StopAreaNumber":"0",
+                "TransportMode":"TRAIN",
+                "StopAreaName":"Stockholms södra",
+                "LineNumber":36,
+                "Destination":"Östertälje",
+                "TimeTabledDateTime":"2012-11-03T21:15:00",
+                "ExpectedDateTime":"2012-11-03T21:15:00",
+                "DisplayTime":"21:15",
+                "JourneyDirection":1
+            },
+            {
+                "SiteId":9530,
+                "StopAreaNumber":"0",
+                "TransportMode":"TRAIN",
+                "StopAreaName":"Stockholms södra",
+                "LineNumber":35,
+                "Destination":"Nynäshamn",
+                "TimeTabledDateTime":"2012-11-03T21:22:00",
+                "ExpectedDateTime":"2012-11-03T21:22:00",
+                "DisplayTime":"21:22",
+                "JourneyDirection":1
+            }
+        ]
+    },
+    "Trams":null
+}}
