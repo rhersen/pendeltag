@@ -1,7 +1,11 @@
 var target = require('../public/modules/names');
 
 describe('target', function () {
-    it('should abbreviate hamn', function () {
+    it('should abbreviate centrum', function () {
+        expect(target.abbreviate("Södertälje centrum")).toEqual("Södertälje c");
+    });
+
+    it('should abbreviate centrum', function () {
         expect(target.abbreviate("Södertälje hamn")).toEqual("Södertälje h");
     });
 

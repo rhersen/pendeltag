@@ -1,5 +1,5 @@
 exports.abbreviate = function (name) {
-    var removals = [/^Upplands /, /^Stockholms /, /^T-/, /amn$/];
+    var removals = [/^Upplands /, /^Stockholms /, /^T-/, /amn$/, /entrum$/];
     var replacements = [ [/^Väster/, 'V‧'], [/^Flemings/,'F‧'] ];
 
     return replacements.concat(removals.map(createReplacement)).reduce(replace, name);
