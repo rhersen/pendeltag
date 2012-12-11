@@ -2,38 +2,40 @@ var key = require('./key');
 
 exports.extract = function (html, done, res) {
     var parsed = JSON.parse(html);
-        var trains = parsed.DPS.Trains;
+    var trains = parsed.DPS.Trains;
 
-        var r = trains ? {
-            station: trains.DpsTrain[0].StopAreaName,
-            updated: getHhMm(parsed.DPS.LatestUpdate),
-            northbound: trains.DpsTrain.filter(hasDirection(2)).map(createDeparture),
-            southbound: trains.DpsTrain.filter(hasDirection(1)).map(createDeparture)
-        }:
-        {
-            station: '?',
-            updated: getHhMm(parsed.DPS.LatestUpdate),
-            northbound: [],
-            southbound: []
-        };
+    var r = trains ? {
+        station: trains.DpsTrain[0].StopAreaName,
+        updated: getHhMm(parsed.DPS.LatestUpdate),
+        northbound: trains.DpsTrain.filter(hasDirection(2)).map(createDeparture),
+        southbound: trains.DpsTrain.filter(hasDirection(1)).map(createDeparture)
+    } :
+    {
+        station: '?',
+        updated: getHhMm(parsed.DPS.LatestUpdate),
+        northbound: [],
+        southbound: []
+    };
 
-        done(r, res);
+    done(r, res);
 
     function hasDirection(dir) {
-        return function (departure) { return departure.JourneyDirection === dir; };
+        return function (departure) {
+            return departure.JourneyDirection === dir;
+        };
     }
 
-        function createDeparture(e) {
-            return {
-                time: getHhMm(e.ExpectedDateTime),
-                destination:e.Destination
-            };
-        }
+    function createDeparture(e) {
+        return {
+            time: getHhMm(e.ExpectedDateTime),
+            destination: e.Destination ? e.Destination : '?'
+        };
+    }
 
-        function getHhMm(timestamp) {
-            var match = /T([0-9]+:[0-9]+:[0-9]+)/.exec(timestamp);
-            return match[1];
-        }
+    function getHhMm(timestamp) {
+        var match = /T([0-9]+:[0-9]+:[0-9]+)/.exec(timestamp);
+        return match[1];
+    }
 };
 
 exports.getUri = function (id) {

@@ -2,8 +2,8 @@ require('jsdom');
 var fs = require('fs');
 var sl = require('../trafiklab');
 
-describe('trafiklab', function() {
-    it('should handle times', function() {
+describe('trafiklab', function () {
+    it('should handle times', function () {
         var file = fs.readFileSync('spec/GetDpsDepartures.json', 'utf-8');
         sl.extract(file, function (result) {
             expect(result.station).toEqual('Stockholms södra');
@@ -21,13 +21,28 @@ describe('trafiklab', function() {
         });
     });
 
-    it('should handle empty response', function() {
+    it('should handle empty response', function () {
         var file = fs.readFileSync('spec/empty.json', 'utf-8');
         sl.extract(file, function (result) {
             expect(result.updated).toEqual('20:27:23');
             expect(result.northbound.length).toEqual(0);
             expect(result.southbound.length).toEqual(0);
         });
+    });
+
+    it('should handle null destination', function () {
+        var file = fs.readFileSync('spec/name-null.json', 'utf-8');
+        sl.extract(file, function (result) {
+            expect(result.station).toEqual('Tullinge');
+            expect(result.updated).toEqual('16:51:03');
+            expect(result.northbound.length).toEqual(7);
+            expect(result.southbound.length).toEqual(8);
+            expect(result.northbound[0].destination).toEqual('?');
+            expect(result.northbound[1].destination).toEqual('Upplands Väsby');
+            expect(result.southbound[1].destination).toEqual('Södertälje centrum');
+            expect(result.southbound[3].destination).toEqual('Tumba');
+        });
+
     });
 
 });
