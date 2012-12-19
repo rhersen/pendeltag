@@ -10,5 +10,4 @@ div
 div#northbound
 div#southbound
 script
-  require.setModuleRoot(window.location.protocol + '//' + window.location.host + '/modules');
-  require.run("main");
+  createStation().init($, $('#id').text(), 256)
