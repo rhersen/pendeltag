@@ -38,7 +38,7 @@ div#northbound {
     float: left;
 }
 
-div#northbound span {
+div#northbound.touch span {
     background-color: #add8e6;
 }
 
@@ -46,7 +46,7 @@ div#southbound {
     float: left;
 }
 
-div#southbound span {
+div#southbound.touch span {
     background-color: #e6adad;
 }
 
