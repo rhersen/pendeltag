@@ -3,12 +3,12 @@ body {
     font-size: 22px;
 }
 
-div#northbound, div#southbound {
+section.table {
     width: 100%;
 }
 
 @media only screen and (orientation: landscape) {
-    div#northbound, div#southbound {
+    section.table {
         width: 50%;
     }
 
@@ -17,7 +17,7 @@ div#northbound, div#southbound {
     }
 }
 
-span.time {
+section.table time {
     float: left;
     clear: left;
     width: 33.3%;
@@ -34,19 +34,27 @@ span.countdown {
     width: 25%;
 }
 
-div#northbound {
+#northbound {
     float: left;
 }
 
-div#northbound.touch span {
+#northbound.touch span {
     background-color: #add8e6;
 }
 
-div#southbound {
+#northbound.touch time {
+    background-color: #add8e6;
+}
+
+#southbound {
     float: left;
 }
 
-div#southbound.touch span {
+#southbound.touch span {
+    background-color: #e6adad;
+}
+
+#southbound.touch time {
     background-color: #e6adad;
 }
 
@@ -79,7 +87,7 @@ a {
     font-size: 1.6em;
 }
 
-span#expired {
+#expired {
     font-size: 0.8em;
 }
 

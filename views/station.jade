@@ -1,13 +1,13 @@
-div
+nav
   span#predecessor= id-1
   span#title= title
   span#successor= id-(-1)
-div
+header
   span#id= id
-  span#updated updated
+  time#updated updated
   button.clear ⎚
   span#expired ?
-div#northbound
-div#southbound
+section.table#northbound
+section.table#southbound
 script
   createStation().init($, $('#id').text(), 256)
