@@ -34,30 +34,6 @@ span.countdown {
     width: 25%;
 }
 
-#northbound {
-    float: left;
-}
-
-#northbound.touch span {
-    background-color: #add8e6;
-}
-
-#northbound.touch time {
-    background-color: #add8e6;
-}
-
-#southbound {
-    float: left;
-}
-
-#southbound.touch span {
-    background-color: #e6adad;
-}
-
-#southbound.touch time {
-    background-color: #e6adad;
-}
-
 @media only screen and (min-width: 800px) and (orientation: portrait) {
     body {
         font-size: 48px;
@@ -72,10 +48,6 @@ span.countdown {
 
 body.pending {
     background: #d3d3d3;
-}
-
-body.pending div#northbound span, body.pending div#southbound span {
-    background-color: #d3d3d3;
 }
 
 div.departure {

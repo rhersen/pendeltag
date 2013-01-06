@@ -64,20 +64,16 @@ exports.departures = function (req, res) {
                 trafiklab.extract(body, req.params.format === 'json' ? sendJson : sendHtml, res);
             } else if (response.statusCode === 401) {
                 console.log('Du måste skaffa en nyckel på trafiklab.se och lägga den i key.js');
-                res.send({
-                    station:'fel=' + response.statusCode,
-                    updated:'API-nyckel saknas.',
-                    northbound:[],
-                    southbound:[]
-                });
+                res.send([{
+                    StopAreaName:'fel=' + response.statusCode,
+                    SiteId:'API-nyckel saknas.'
+                }]);
             } else {
                 console.log(response.statusCode);
                 if (req.params.format === 'json') {
                     res.send({
-                        station:'fel=' + response.statusCode,
-                        updated:response.statusCode + ':',
-                        northbound:[],
-                        southbound:[]
+                        StopAreaName:'fel=' + response.statusCode,
+                        SiteId:response.statusCode + ':'
                     });
                 } else {
                     res.render('departures');
