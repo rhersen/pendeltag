@@ -34,6 +34,14 @@ span.countdown {
     width: 25%;
 }
 
+.direction2 {
+    background-color: #add8e6;
+}
+
+.direction1 {
+    background-color: #e6adad;
+}
+
 @media only screen and (min-width: 800px) and (orientation: portrait) {
     body {
         font-size: 48px;
