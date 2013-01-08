@@ -20,7 +20,6 @@ describe('trafiklab', function () {
     it('should handle empty response', function () {
         var file = fs.readFileSync('spec/empty.json', 'utf-8');
         sl.extract(file, function (result) {
-            expect(result.updated).toEqual('20:27:23');
             expect(result.length).toEqual(1);
         });
     });
