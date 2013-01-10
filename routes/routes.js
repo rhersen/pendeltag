@@ -1,6 +1,7 @@
 const TULLINGE = 9525;
 const KARLBERG = 9510;
-const SPANGA = 9704;
+const SODERTALJE = 9520;
+const SODRA = 9520;
 const CENTRALEN = 9001;
 
 var request = require('request');
@@ -11,8 +12,9 @@ exports.index = function (req, res) {
         title:'SL',
         stations:[
             {name:'Tullinge', id:TULLINGE},
+            {name:'Södertälje', id:SODERTALJE},
+            {name:'Södra', id:SODRA},
             {name:'Karlberg', id:KARLBERG},
-            {name:'Spånga', id:SPANGA},
             {name:'Centralen', id:CENTRALEN}
         ]
     })
