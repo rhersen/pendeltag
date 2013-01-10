@@ -1,7 +1,7 @@
 const TULLINGE = 9525;
 const KARLBERG = 9510;
 const SODERTALJE = 9520;
-const SODRA = 9520;
+const SODRA = 9530;
 const CENTRALEN = 9001;
 
 var request = require('request');
