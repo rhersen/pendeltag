@@ -1,17 +1,38 @@
 var key = require('./key');
 
+var trainKeys = ['Destination', 'LineNumber', 'JourneyDirection', 'TransportMode'];
+
 exports.extract = function (html, done, res) {
     var parsed = JSON.parse(html);
     var trains = parsed.DPS.Trains;
 
-    var r = trains ? trains.DpsTrain : [{SiteId:9001, StopAreaName:'?'}];
+    var r = trains ? trains.DpsTrain.map(createTrain) : [
+        {SiteId: 9001, StopAreaName: '?'}
+    ];
 
     done(r, res);
 
-    function getHhMm(timestamp) {
-        var match = /T([0-9]+:[0-9]+:[0-9]+)/.exec(timestamp);
-        return match[1];
+    function createTrain(departure) {
+        var stop = { };
+        var train = { };
+
+        for (var key in departure) {
+            if (isTrainProperty(key)) {
+                train[key] = departure[key];
+            } else {
+                stop[key] = departure[key];
+            }
+        }
+
+        train.Stops = [ stop ];
+
+        return train;
+
+        function isTrainProperty(key) {
+            return trainKeys.indexOf(key) !== -1;
+        }
     }
+
 };
 
 exports.getUri = function (id) {
