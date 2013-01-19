@@ -62,35 +62,27 @@ exports.departures = function (req, res) {
         if (error) {
             console.log(error.message);
         } else {
+            var r;
             if (response.statusCode === 200) {
-                trafiklab.extract(body, req.params.format === 'json' ? sendJson : sendHtml, res);
+                r = trafiklab.extract(body);
+                r.predecessor = req.params.id - 1;
+                r.successor = r.predecessor + 2;
             } else if (response.statusCode === 401) {
                 console.log('Du måste skaffa en nyckel på trafiklab.se och lägga den i key.js');
-                res.send([{
+                r = [{
                     StopAreaName:'fel=' + response.statusCode,
                     SiteId:'API-nyckel saknas.'
-                }]);
+                }];
             } else {
                 console.log(response.statusCode);
-                if (req.params.format === 'json') {
-                    res.send({
-                        StopAreaName:'fel=' + response.statusCode,
-                        SiteId:response.statusCode + ':'
-                    });
-                } else {
-                    res.render('departures');
-                }
+                r = {
+                    StopAreaName: 'fel=' + response.statusCode,
+                    SiteId: response.statusCode + ':'
+                };
             }
+
+            res.send(r);
         }
     }
 
-    function sendHtml(result, response) {
-        response.render('departures', result);
-    }
-
-    function sendJson(result, response) {
-        result.predecessor = req.params.id - 1;
-        result.successor = result.predecessor + 2;
-        response.send(result);
-    }
 };
