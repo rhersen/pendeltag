@@ -1,4 +1,5 @@
 var key = require('./key');
+var _ = require('underscore');
 
 var trainKeys = ['Destination', 'LineNumber', 'JourneyDirection', 'TransportMode'];
 
@@ -27,13 +28,17 @@ exports.extract = function (html) {
     var trains = parsed.DPS.Trains;
 
     if (trains) {
-        var newState = trains.DpsTrain.map(createTrain);
+        var newState = _.map(_.filter(trains.DpsTrain, isSouthbound), createTrain);
         state = merge(state, newState);
         return state;
     } else {
         return [
             {SiteId: 9001, StopAreaName: '?'}
         ];
+    }
+
+    function isSouthbound(departure) {
+        return departure.JourneyDirection === 1;
     }
 
     function createTrain(departure) {

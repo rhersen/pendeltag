@@ -4,12 +4,11 @@ var sl = require('../trafiklab');
 
 describe('trafiklab', function () {
 
-    it('should return trains', function () {
+    it('should only return southbound trains', function () {
         var file = fs.readFileSync('spec/huddinge.json', 'utf-8');
         var result = sl.extract(file);
-        expect(result.length).toEqual(8);
+        expect(result.length).toEqual(4);
         expect(result[0].Destination).toEqual('Södertälje centrum');
-        expect(result[4].Destination).toEqual('Märsta');
     });
 
     it('should return train-specific fields', function () {
@@ -48,7 +47,7 @@ describe('trafiklab', function () {
 
         var result = sl.extract(file);
 
-        expect(result.length).toEqual(8);
+        expect(result.length).toEqual(4);
         for (var i = 0; i < result.length; i++) {
             var r = result[i];
             expect(r.Stops.length).toEqual(1);
@@ -58,7 +57,7 @@ describe('trafiklab', function () {
 
         result = sl.extract(file);
 
-        expect(result.length).toEqual(8);
+        expect(result.length).toEqual(4);
         for (i = 0; i < result.length; i++) {
             r = result[i];
             var stops = r.Stops;
