@@ -19,19 +19,16 @@ section.table {
 
 section.table time {
     float: left;
-    clear: left;
-    width: 33.3%;
 }
 
 span.destination {
     float: left;
-    width: 41.6%;
+    clear: left;
 }
 
 span.countdown {
     float: left;
     text-align: right;
-    width: 25%;
 }
 
 .direction2 {

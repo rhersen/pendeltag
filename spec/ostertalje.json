@@ -1,0 +1,124 @@
+{"DPS": {
+    "@xmlnsxsi": "http:\/\/www.w3.org\/2001\/XMLSchema-instance",
+    "@xmlnsxsd": "http:\/\/www.w3.org\/2001\/XMLSchema",
+    "@xmlns": "http:\/\/www1.sl.se\/realtidws\/",
+    "LatestUpdate": "2013-02-20T07:38:41.9732774+01:00",
+    "ExecutionTime": "00:00:00.1250016",
+    "Buses": {
+        "DpsBus": [
+            {
+                "SiteId": 9522,
+                "StopAreaNumber": 75054,
+                "TransportMode": "BUS",
+                "StopAreaName": "Östertälje station",
+                "LineNumber": 759,
+                "Destination": "Fornhöjden",
+                "TimeTabledDateTime": "2013-02-20T07:42:00",
+                "ExpectedDateTime": "2013-02-20T07:42:00",
+                "DisplayTime": "3 min"
+            }
+        ]
+    },
+    "Metros": null,
+    "Trains": {
+        "DpsTrain": [
+            {
+                "SiteId": 9522,
+                "StopAreaNumber": "0",
+                "TransportMode": "TRAIN",
+                "StopAreaName": "Östertälje",
+                "LineNumber": 36,
+                "Destination": "Märsta",
+                "TimeTabledDateTime": "2013-02-20T07:38:00",
+                "ExpectedDateTime": "2013-02-20T07:38:00",
+                "DisplayTime": "0 min",
+                "JourneyDirection": 2
+            },
+            {
+                "SiteId": 9522,
+                "StopAreaNumber": "0",
+                "TransportMode": "TRAIN",
+                "StopAreaName": "Östertälje",
+                "LineNumber": 36,
+                "Destination": "Märsta",
+                "TimeTabledDateTime": "2013-02-20T07:53:00",
+                "ExpectedDateTime": "2013-02-20T07:53:00",
+                "DisplayTime": "14 min",
+                "JourneyDirection": 2
+            },
+            {
+                "SiteId": 9522,
+                "StopAreaNumber": "0",
+                "TransportMode": "TRAIN",
+                "StopAreaName": "Östertälje",
+                "LineNumber": 36,
+                "Destination": "Märsta",
+                "TimeTabledDateTime": "2013-02-20T08:08:00",
+                "ExpectedDateTime": "2013-02-20T08:08:00",
+                "DisplayTime": "08:08",
+                "JourneyDirection": 2
+            },
+            {
+                "SiteId": 9522,
+                "StopAreaNumber": "0",
+                "TransportMode": "TRAIN",
+                "StopAreaName": "Östertälje",
+                "LineNumber": 36,
+                "Destination": "Märsta",
+                "TimeTabledDateTime": "2013-02-20T08:23:00",
+                "ExpectedDateTime": "2013-02-20T08:23:00",
+                "DisplayTime": "08:23",
+                "JourneyDirection": 2
+            },
+            {
+                "SiteId": 9522,
+                "StopAreaNumber": "0",
+                "TransportMode": "TRAIN",
+                "StopAreaName": "Östertälje",
+                "LineNumber": 36,
+                "Destination": "Södertälje centrum",
+                "TimeTabledDateTime": "2013-02-20T07:52:00",
+                "ExpectedDateTime": "2013-02-20T07:52:00",
+                "DisplayTime": "13 min",
+                "JourneyDirection": 1
+            },
+            {
+                "SiteId": 9522,
+                "StopAreaNumber": "0",
+                "TransportMode": "TRAIN",
+                "StopAreaName": "Östertälje",
+                "LineNumber": 36,
+                "Destination": "Södertälje centrum",
+                "TimeTabledDateTime": "2013-02-20T08:07:00",
+                "ExpectedDateTime": "2013-02-20T08:07:00",
+                "DisplayTime": "28 min",
+                "JourneyDirection": 1
+            },
+            {
+                "SiteId": 9522,
+                "StopAreaNumber": "0",
+                "TransportMode": "TRAIN",
+                "StopAreaName": "Östertälje",
+                "LineNumber": 36,
+                "Destination": "Södertälje centrum",
+                "TimeTabledDateTime": "2013-02-20T08:22:00",
+                "ExpectedDateTime": "2013-02-20T08:22:00",
+                "DisplayTime": "08:22",
+                "JourneyDirection": 1
+            },
+            {
+                "SiteId": 9522,
+                "StopAreaNumber": "0",
+                "TransportMode": "TRAIN",
+                "StopAreaName": "Östertälje",
+                "LineNumber": 36,
+                "Destination": "Södertälje centrum",
+                "TimeTabledDateTime": "2013-02-20T08:37:00",
+                "ExpectedDateTime": "2013-02-20T08:37:00",
+                "DisplayTime": "08:37",
+                "JourneyDirection": 1
+            }
+        ]
+    },
+    "Trams": null
+}}

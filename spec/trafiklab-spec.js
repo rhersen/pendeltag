@@ -41,4 +41,31 @@ describe('trafiklab', function () {
         expect(result.length).toEqual(1);
     });
 
+    it('should add stops', function () {
+        var file = fs.readFileSync('spec/ronninge.json', 'utf-8');
+
+        sl.clear();
+
+        var result = sl.extract(file);
+
+        expect(result.length).toEqual(8);
+        for (var i = 0; i < result.length; i++) {
+            var r = result[i];
+            expect(r.Stops.length).toEqual(1);
+        }
+
+        file = fs.readFileSync('spec/ostertalje.json', 'utf-8');
+
+        result = sl.extract(file);
+
+        expect(result.length).toEqual(8);
+        for (i = 0; i < result.length; i++) {
+            r = result[i];
+            var stops = r.Stops;
+            expect(stops.length).toEqual(2);
+            expect(stops[0].SiteId).toEqual(9523);
+            expect(stops[1].SiteId).toEqual(9522);
+        }
+    });
+
 });
