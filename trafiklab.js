@@ -6,17 +6,29 @@ var trainKeys = ['Destination', 'LineNumber', 'JourneyDirection', 'TransportMode
 var state = undefined;
 
 function merge(state, newState) {
-    if (state) {
-        for (var i = 0; i < state.length; i++) {
-            var newState2 = newState[i];
-            if (newState2) {
-                state[i].Stops.push(newState2.Stops[0]);
-            }
-        }
-        return state;
-    } else {
+    if (!state) {
         return newState;
     }
+
+    _.each(state, function (train, i) {
+        function removeOld() {
+            for (var j = 0; j < train.Stops.length; j++) {
+                var stop = train.Stops[j];
+                if (stop.SiteId === newStop.SiteId) {
+                    train.Stops.splice(j, 1);
+                    return;
+                }
+            }
+        }
+
+        if (newState[i]) {
+            var newStop = newState[i].Stops[0];
+            removeOld();
+            train.Stops.push(newStop);
+        }
+    });
+
+    return state;
 }
 
 exports.clear = function () {

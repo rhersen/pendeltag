@@ -1,5 +1,6 @@
 require('jsdom');
 var fs = require('fs');
+var _ = require('underscore');
 var sl = require('../trafiklab');
 
 describe('trafiklab', function () {
@@ -40,31 +41,42 @@ describe('trafiklab', function () {
         expect(result.length).toEqual(1);
     });
 
-    it('should add stops', function () {
-        var file = fs.readFileSync('spec/ronninge.json', 'utf-8');
+    function assertStops(expectedStops, result) {
+        _.each(result, function (train) {
+            var actualStops = train.Stops;
+            expect(actualStops.length).toEqual(expectedStops.length);
+            _.each(expectedStops, function (expectedStop, i) {
+                expect(actualStops[i].SiteId).toEqual(expectedStop)
+            })
+        });
+    }
 
+    it('should add stops', function () {
         sl.clear();
 
-        var result = sl.extract(file);
-
+        var result = sl.extract(fs.readFileSync('spec/ronninge.json', 'utf-8'));
         expect(result.length).toEqual(4);
-        for (var i = 0; i < result.length; i++) {
-            var r = result[i];
-            expect(r.Stops.length).toEqual(1);
-        }
+        assertStops([9523], result);
 
-        file = fs.readFileSync('spec/ostertalje.json', 'utf-8');
-
-        result = sl.extract(file);
-
+        result = sl.extract(fs.readFileSync('spec/ostertalje.json', 'utf-8'));
         expect(result.length).toEqual(4);
-        for (i = 0; i < result.length; i++) {
-            r = result[i];
-            var stops = r.Stops;
-            expect(stops.length).toEqual(2);
-            expect(stops[0].SiteId).toEqual(9523);
-            expect(stops[1].SiteId).toEqual(9522);
-        }
+        assertStops([9523, 9522], result);
+    });
+
+    it('should overwrite stops if SiteId is the same', function () {
+        sl.clear();
+
+        var result = sl.extract(fs.readFileSync('spec/ronninge.json', 'utf-8'));
+        expect(result.length).toEqual(4);
+        assertStops([9523], result);
+
+        result = sl.extract(fs.readFileSync('spec/ostertalje.json', 'utf-8'));
+        expect(result.length).toEqual(4);
+        assertStops([9523, 9522], result);
+
+        result = sl.extract(fs.readFileSync('spec/ronninge.json', 'utf-8'));
+        expect(result.length).toEqual(4);
+        assertStops([9522, 9523], result);
     });
 
 });
