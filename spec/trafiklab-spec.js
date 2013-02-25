@@ -76,7 +76,7 @@ describe('trafiklab', function () {
 
         result = sl.extract(fs.readFileSync('spec/ronninge.json', 'utf-8'));
         expect(result.length).toEqual(4);
-        assertStops([9522, 9523], result);
+        assertStops([9523, 9522], result);
     });
 
 });

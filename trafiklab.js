@@ -25,6 +25,7 @@ function merge(state, newState) {
             var newStop = newState[i].Stops[0];
             removeOld();
             train.Stops.push(newStop);
+            train.Stops.sort(function (a, b) { return a.SiteId < b.SiteId; });
         }
     });
 
