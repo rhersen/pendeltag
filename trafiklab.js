@@ -20,23 +20,20 @@ function merge(state, newState) {
         });
     });
 
-    (function () {
-        function removeOld() {
-            for (var j = 0; j < state.stops.length; j++) {
-                var stop = state.stops[j];
-                if (stop.SiteId === newState.stops[0].SiteId) {
-                    state.stops.splice(j, 1);
-                    return;
-                }
+    function removeOld(siteId) {
+        for (var j = 0; j < state.stops.length; j++) {
+            if (state.stops[j].SiteId === siteId) {
+                state.stops.splice(j, 1);
+                return;
             }
         }
+    }
 
-        removeOld();
-        state.stops.push(newState.stops[0]);
-        state.stops.sort(function (a, b) {
-            return a.SiteId < b.SiteId;
-        });
-    })();
+    removeOld(newState.stops[0].SiteId);
+    state.stops.push(newState.stops[0]);
+    state.stops.sort(function (a, b) {
+        return a.SiteId < b.SiteId;
+    });
 
     return state;
 }
@@ -49,17 +46,19 @@ exports.extract = function (html) {
     var parsed = JSON.parse(html);
     var trains = parsed.DPS.Trains;
 
-    if (trains) {
-        var southbound = _.filter(trains.DpsTrain, isSouthbound);
+    function getStop(departure) {
         var stop = {};
-        var departure = southbound[0];
         for (var key in departure) {
             if (isStopProperty(key)) {
                 stop[key] = departure[key];
             }
         }
-        var newState = {trains: _.map(southbound, createTrain), stops: [stop]};
-        state = merge(state, newState);
+        return stop;
+    }
+
+    if (trains) {
+        var southbound = _.filter(trains.DpsTrain, isSouthbound);
+        state = merge(state, {trains: _.map(southbound, createTrain), stops: [getStop(southbound[0])]});
         return state;
     } else {
         return {trains: [
