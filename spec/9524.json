@@ -1,0 +1,267 @@
+{"DPS": {
+    "@xmlnsxsi": "http:\/\/www.w3.org\/2001\/XMLSchema-instance",
+    "@xmlnsxsd": "http:\/\/www.w3.org\/2001\/XMLSchema",
+    "@xmlns": "http:\/\/www1.sl.se\/realtidws\/",
+    "LatestUpdate": "2013-02-25T20:27:56.0379909+01:00",
+    "ExecutionTime": "00:00:00.1250000",
+    "Buses": {
+        "DpsBus": [
+            {
+                "SiteId": 9524,
+                "StopAreaNumber": 70258,
+                "TransportMode": "BUS",
+                "StopAreaName": "Tumba station",
+                "LineNumber": 707,
+                "Destination": "Fruängen",
+                "TimeTabledDateTime": "2013-02-25T20:37:00",
+                "ExpectedDateTime": "2013-02-25T20:37:00",
+                "DisplayTime": "9 min"
+            },
+            {
+                "SiteId": 9524,
+                "StopAreaNumber": 70258,
+                "TransportMode": "BUS",
+                "StopAreaName": "Tumba station",
+                "LineNumber": 715,
+                "Destination": "Solbo",
+                "TimeTabledDateTime": "2013-02-25T20:50:00",
+                "ExpectedDateTime": "2013-02-25T20:50:00",
+                "DisplayTime": "22 min"
+            },
+            {
+                "SiteId": 9524,
+                "StopAreaNumber": 70258,
+                "TransportMode": "BUS",
+                "StopAreaName": "Tumba station",
+                "LineNumber": 713,
+                "Destination": "Visättra",
+                "TimeTabledDateTime": "2013-02-25T20:50:00",
+                "ExpectedDateTime": "2013-02-25T20:50:00",
+                "DisplayTime": "22 min"
+            },
+            {
+                "SiteId": 9524,
+                "StopAreaNumber": 70258,
+                "TransportMode": "BUS",
+                "StopAreaName": "Tumba station",
+                "LineNumber": 725,
+                "Destination": "Rönninge (Nytorp)",
+                "TimeTabledDateTime": "2013-02-25T20:50:00",
+                "ExpectedDateTime": "2013-02-25T20:50:26",
+                "DisplayTime": "22 min"
+            },
+            {
+                "SiteId": 9524,
+                "StopAreaNumber": 70258,
+                "TransportMode": "BUS",
+                "StopAreaName": "Tumba station",
+                "LineNumber": 716,
+                "Destination": "Bremora",
+                "TimeTabledDateTime": "2013-02-25T20:52:00",
+                "ExpectedDateTime": "2013-02-25T20:52:00",
+                "DisplayTime": "24 min"
+            },
+            {
+                "SiteId": 9524,
+                "StopAreaNumber": 70258,
+                "TransportMode": "BUS",
+                "StopAreaName": "Tumba station",
+                "LineNumber": 718,
+                "Destination": "Östra Storvreten",
+                "TimeTabledDateTime": "2013-02-25T20:52:00",
+                "ExpectedDateTime": "2013-02-25T20:52:00",
+                "DisplayTime": "24 min"
+            },
+            {
+                "SiteId": 9524,
+                "StopAreaNumber": 70258,
+                "TransportMode": "BUS",
+                "StopAreaName": "Tumba station",
+                "LineNumber": 708,
+                "Destination": "Hallunda centrum",
+                "TimeTabledDateTime": "2013-02-25T20:52:00",
+                "ExpectedDateTime": "2013-02-25T20:52:27",
+                "DisplayTime": "24 min"
+            },
+            {
+                "SiteId": 9524,
+                "StopAreaNumber": 70258,
+                "TransportMode": "BUS",
+                "StopAreaName": "Tumba station",
+                "LineNumber": 707,
+                "Destination": "Fruängen",
+                "TimeTabledDateTime": "2013-02-25T21:07:00",
+                "ExpectedDateTime": "2013-02-25T21:07:00",
+                "DisplayTime": "21:07"
+            },
+            {
+                "SiteId": 9524,
+                "StopAreaNumber": 70258,
+                "TransportMode": "BUS",
+                "StopAreaName": "Tumba station",
+                "LineNumber": 715,
+                "Destination": "Solbo",
+                "TimeTabledDateTime": "2013-02-25T21:20:00",
+                "ExpectedDateTime": "2013-02-25T21:20:00",
+                "DisplayTime": "21:20"
+            },
+            {
+                "SiteId": 9524,
+                "StopAreaNumber": 70258,
+                "TransportMode": "BUS",
+                "StopAreaName": "Tumba station",
+                "LineNumber": 725,
+                "Destination": "Rönninge station",
+                "TimeTabledDateTime": "2013-02-25T21:20:00",
+                "ExpectedDateTime": "2013-02-25T21:20:21",
+                "DisplayTime": "21:20"
+            },
+            {
+                "SiteId": 9524,
+                "StopAreaNumber": 70258,
+                "TransportMode": "BUS",
+                "StopAreaName": "Tumba station",
+                "LineNumber": 713,
+                "Destination": "Visättra",
+                "TimeTabledDateTime": "2013-02-25T21:21:00",
+                "ExpectedDateTime": "2013-02-25T21:21:00",
+                "DisplayTime": "21:21"
+            },
+            {
+                "SiteId": 9524,
+                "StopAreaNumber": 70258,
+                "TransportMode": "BUS",
+                "StopAreaName": "Tumba station",
+                "LineNumber": 716,
+                "Destination": "Bremora",
+                "TimeTabledDateTime": "2013-02-25T21:22:00",
+                "ExpectedDateTime": "2013-02-25T21:22:00",
+                "DisplayTime": "21:22"
+            },
+            {
+                "SiteId": 9524,
+                "StopAreaNumber": 70258,
+                "TransportMode": "BUS",
+                "StopAreaName": "Tumba station",
+                "LineNumber": 708,
+                "Destination": "Rönninge station",
+                "TimeTabledDateTime": "2013-02-25T21:22:00",
+                "ExpectedDateTime": "2013-02-25T21:22:00",
+                "DisplayTime": "21:22"
+            },
+            {
+                "SiteId": 9524,
+                "StopAreaNumber": 70258,
+                "TransportMode": "BUS",
+                "StopAreaName": "Tumba station",
+                "LineNumber": 718,
+                "Destination": "Östra Storvreten",
+                "TimeTabledDateTime": "2013-02-25T21:22:00",
+                "ExpectedDateTime": "2013-02-25T21:22:00",
+                "DisplayTime": "21:22"
+            }
+        ]
+    },
+    "Metros": null,
+    "Trains": {
+        "DpsTrain": [
+            {
+                "SiteId": 9524,
+                "StopAreaNumber": "0",
+                "TransportMode": "TRAIN",
+                "StopAreaName": "Tumba",
+                "LineNumber": 36,
+                "Destination": "Södertälje centrum",
+                "TimeTabledDateTime": "2013-02-25T20:27:00",
+                "ExpectedDateTime": "2013-02-25T20:28:11",
+                "DisplayTime": "0 min",
+                "JourneyDirection": 1
+            },
+            {
+                "SiteId": 9524,
+                "StopAreaNumber": "0",
+                "TransportMode": "TRAIN",
+                "StopAreaName": "Tumba",
+                "LineNumber": 36,
+                "Destination": "Södertälje centrum",
+                "TimeTabledDateTime": "2013-02-25T20:42:00",
+                "ExpectedDateTime": "2013-02-25T20:42:00",
+                "DisplayTime": "14 min",
+                "JourneyDirection": 1
+            },
+            {
+                "SiteId": 9524,
+                "StopAreaNumber": "0",
+                "TransportMode": "TRAIN",
+                "StopAreaName": "Tumba",
+                "LineNumber": 36,
+                "Destination": "Södertälje centrum",
+                "TimeTabledDateTime": "2013-02-25T20:57:00",
+                "ExpectedDateTime": "2013-02-25T20:57:00",
+                "DisplayTime": "29 min",
+                "JourneyDirection": 1
+            },
+            {
+                "SiteId": 9524,
+                "StopAreaNumber": "0",
+                "TransportMode": "TRAIN",
+                "StopAreaName": "Tumba",
+                "LineNumber": 36,
+                "Destination": "Södertälje centrum",
+                "TimeTabledDateTime": "2013-02-25T21:12:00",
+                "ExpectedDateTime": "2013-02-25T21:12:00",
+                "DisplayTime": "21:12",
+                "JourneyDirection": 1
+            },
+            {
+                "SiteId": 9524,
+                "StopAreaNumber": "0",
+                "TransportMode": "TRAIN",
+                "StopAreaName": "Tumba",
+                "LineNumber": 36,
+                "Destination": "Södertälje centrum",
+                "TimeTabledDateTime": "2013-02-25T21:27:00",
+                "ExpectedDateTime": "2013-02-25T21:27:00",
+                "DisplayTime": "21:27",
+                "JourneyDirection": 1
+            },
+            {
+                "SiteId": 9524,
+                "StopAreaNumber": "0",
+                "TransportMode": "TRAIN",
+                "StopAreaName": "Tumba",
+                "LineNumber": 36,
+                "Destination": "Märsta",
+                "TimeTabledDateTime": "2013-02-25T20:33:00",
+                "ExpectedDateTime": "2013-02-25T20:33:00",
+                "DisplayTime": "5 min",
+                "JourneyDirection": 2
+            },
+            {
+                "SiteId": 9524,
+                "StopAreaNumber": "0",
+                "TransportMode": "TRAIN",
+                "StopAreaName": "Tumba",
+                "LineNumber": 36,
+                "Destination": "Märsta",
+                "TimeTabledDateTime": "2013-02-25T20:48:00",
+                "ExpectedDateTime": "2013-02-25T20:48:00",
+                "DisplayTime": "20 min",
+                "JourneyDirection": 2
+            },
+            {
+                "SiteId": 9524,
+                "StopAreaNumber": "0",
+                "TransportMode": "TRAIN",
+                "StopAreaName": "Tumba",
+                "LineNumber": 36,
+                "Destination": "Märsta",
+                "TimeTabledDateTime": "2013-02-25T21:18:00",
+                "ExpectedDateTime": "2013-02-25T21:18:00",
+                "DisplayTime": "21:18",
+                "JourneyDirection": 2
+            }
+        ]
+    },
+    "Trams": null
+}}

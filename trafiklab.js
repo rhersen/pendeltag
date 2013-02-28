@@ -1,6 +1,7 @@
 var key = require('./key');
 var _ = require('underscore');
 
+var stopKeys = ['SiteId', 'StopAreaName', 'StopAreaNumber'];
 var trainKeys = ['Destination', 'LineNumber', 'JourneyDirection', 'TransportMode'];
 
 var state = undefined;
@@ -10,24 +11,32 @@ function merge(state, newState) {
         return newState;
     }
 
-    _.each(state, function (train, i) {
+    _.each(state.trains, function (train, i) {
+        var newStop = newState.trains[i] ? newState.trains[i].Stops[0] : 'not found';
+
+        train.Stops.push(newStop);
+        train.Stops.sort(function (a, b) {
+            return a.SiteId < b.SiteId;
+        });
+    });
+
+    (function () {
         function removeOld() {
-            for (var j = 0; j < train.Stops.length; j++) {
-                var stop = train.Stops[j];
-                if (stop.SiteId === newStop.SiteId) {
-                    train.Stops.splice(j, 1);
+            for (var j = 0; j < state.stops.length; j++) {
+                var stop = state.stops[j];
+                if (stop.SiteId === newState.stops[0].SiteId) {
+                    state.stops.splice(j, 1);
                     return;
                 }
             }
         }
 
-        if (newState[i]) {
-            var newStop = newState[i].Stops[0];
-            removeOld();
-            train.Stops.push(newStop);
-            train.Stops.sort(function (a, b) { return a.SiteId < b.SiteId; });
-        }
-    });
+        removeOld();
+        state.stops.push(newState.stops[0]);
+        state.stops.sort(function (a, b) {
+            return a.SiteId < b.SiteId;
+        });
+    })();
 
     return state;
 }
@@ -41,13 +50,21 @@ exports.extract = function (html) {
     var trains = parsed.DPS.Trains;
 
     if (trains) {
-        var newState = _.map(_.filter(trains.DpsTrain, isSouthbound), createTrain);
+        var southbound = _.filter(trains.DpsTrain, isSouthbound);
+        var stop = {};
+        var departure = southbound[0];
+        for (var key in departure) {
+            if (isStopProperty(key)) {
+                stop[key] = departure[key];
+            }
+        }
+        var newState = {trains: _.map(southbound, createTrain), stops: [stop]};
         state = merge(state, newState);
         return state;
     } else {
-        return [
+        return {trains: [
             {SiteId: 9001, StopAreaName: '?'}
-        ];
+        ]};
     }
 
     function isSouthbound(departure) {
@@ -61,7 +78,7 @@ exports.extract = function (html) {
         for (var key in departure) {
             if (isTrainProperty(key)) {
                 train[key] = departure[key];
-            } else {
+            } else if (!isStopProperty(key)) {
                 stop[key] = departure[key];
             }
         }
@@ -75,6 +92,9 @@ exports.extract = function (html) {
         }
     }
 
+    function isStopProperty(key) {
+        return stopKeys.indexOf(key) !== -1;
+    }
 };
 
 exports.getUri = function (id) {

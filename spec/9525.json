@@ -1,0 +1,244 @@
+{"DPS": {
+    "@xmlnsxsi": "http:\/\/www.w3.org\/2001\/XMLSchema-instance",
+    "@xmlnsxsd": "http:\/\/www.w3.org\/2001\/XMLSchema",
+    "@xmlns": "http:\/\/www1.sl.se\/realtidws\/",
+    "LatestUpdate": "2013-02-25T20:28:14.6632737+01:00",
+    "ExecutionTime": "00:00:00.1093778",
+    "Buses": {
+        "DpsBus": [
+            {
+                "SiteId": 9525,
+                "StopAreaNumber": 70243,
+                "TransportMode": "BUS",
+                "StopAreaName": "Tullinge station",
+                "LineNumber": 722,
+                "Destination": "Huddinge sjukhus",
+                "TimeTabledDateTime": "2013-02-25T20:28:00",
+                "ExpectedDateTime": "2013-02-25T20:28:00",
+                "DisplayTime": "0 min"
+            },
+            {
+                "SiteId": 9525,
+                "StopAreaNumber": 70243,
+                "TransportMode": "BUS",
+                "StopAreaName": "Tullinge station",
+                "LineNumber": 713,
+                "Destination": "Visättra",
+                "TimeTabledDateTime": "2013-02-25T20:28:00",
+                "ExpectedDateTime": "2013-02-25T20:28:00",
+                "DisplayTime": "0 min"
+            },
+            {
+                "SiteId": 9525,
+                "StopAreaNumber": 70243,
+                "TransportMode": "BUS",
+                "StopAreaName": "Tullinge station",
+                "LineNumber": 713,
+                "Destination": "Tumba station",
+                "TimeTabledDateTime": "2013-02-25T20:32:00",
+                "ExpectedDateTime": "2013-02-25T20:33:41",
+                "DisplayTime": "5 min"
+            },
+            {
+                "SiteId": 9525,
+                "StopAreaNumber": 70243,
+                "TransportMode": "BUS",
+                "StopAreaName": "Tullinge station",
+                "LineNumber": 721,
+                "Destination": "Riksten",
+                "TimeTabledDateTime": "2013-02-25T20:39:00",
+                "ExpectedDateTime": "2013-02-25T20:39:24",
+                "DisplayTime": "11 min"
+            },
+            {
+                "SiteId": 9525,
+                "StopAreaNumber": 70243,
+                "TransportMode": "BUS",
+                "StopAreaName": "Tullinge station",
+                "LineNumber": 723,
+                "Destination": "Tullinge kyrka",
+                "TimeTabledDateTime": "2013-02-25T20:43:00",
+                "ExpectedDateTime": "2013-02-25T20:43:00",
+                "DisplayTime": "20:43"
+            },
+            {
+                "SiteId": 9525,
+                "StopAreaNumber": 70243,
+                "TransportMode": "BUS",
+                "StopAreaName": "Tullinge station",
+                "LineNumber": 713,
+                "Destination": "Visättra",
+                "TimeTabledDateTime": "2013-02-25T20:58:00",
+                "ExpectedDateTime": "2013-02-25T20:58:00",
+                "DisplayTime": "29 min"
+            },
+            {
+                "SiteId": 9525,
+                "StopAreaNumber": 70243,
+                "TransportMode": "BUS",
+                "StopAreaName": "Tullinge station",
+                "LineNumber": 713,
+                "Destination": "Tumba station",
+                "TimeTabledDateTime": "2013-02-25T21:02:00",
+                "ExpectedDateTime": "2013-02-25T21:02:00",
+                "DisplayTime": "21:02"
+            },
+            {
+                "SiteId": 9525,
+                "StopAreaNumber": 70243,
+                "TransportMode": "BUS",
+                "StopAreaName": "Tullinge station",
+                "LineNumber": 721,
+                "Destination": "Riksten",
+                "TimeTabledDateTime": "2013-02-25T21:09:00",
+                "ExpectedDateTime": "2013-02-25T21:09:00",
+                "DisplayTime": "21:09"
+            },
+            {
+                "SiteId": 9525,
+                "StopAreaNumber": 70243,
+                "TransportMode": "BUS",
+                "StopAreaName": "Tullinge station",
+                "LineNumber": 723,
+                "Destination": "Tullinge kyrka",
+                "TimeTabledDateTime": "2013-02-25T21:13:00",
+                "ExpectedDateTime": "2013-02-25T21:13:00",
+                "DisplayTime": "21:13"
+            },
+            {
+                "SiteId": 9525,
+                "StopAreaNumber": 70777,
+                "TransportMode": "BUS",
+                "StopAreaName": "Tullinge station södra",
+                "LineNumber": 721,
+                "Destination": "Riksten",
+                "TimeTabledDateTime": "2013-02-25T20:43:00",
+                "ExpectedDateTime": "2013-02-25T20:43:24",
+                "DisplayTime": "15 min"
+            },
+            {
+                "SiteId": 9525,
+                "StopAreaNumber": 70777,
+                "TransportMode": "BUS",
+                "StopAreaName": "Tullinge station södra",
+                "LineNumber": 721,
+                "Destination": "Tullinge station",
+                "TimeTabledDateTime": "2013-02-25T20:46:00",
+                "ExpectedDateTime": "2013-02-25T20:46:00",
+                "DisplayTime": "17 min"
+            },
+            {
+                "SiteId": 9525,
+                "StopAreaNumber": 70777,
+                "TransportMode": "BUS",
+                "StopAreaName": "Tullinge station södra",
+                "LineNumber": 721,
+                "Destination": "Riksten",
+                "TimeTabledDateTime": "2013-02-25T21:13:00",
+                "ExpectedDateTime": "2013-02-25T21:13:00",
+                "DisplayTime": "21:13"
+            },
+            {
+                "SiteId": 9525,
+                "StopAreaNumber": 70777,
+                "TransportMode": "BUS",
+                "StopAreaName": "Tullinge station södra",
+                "LineNumber": 721,
+                "Destination": "Tullinge station",
+                "TimeTabledDateTime": "2013-02-25T21:16:00",
+                "ExpectedDateTime": "2013-02-25T21:16:00",
+                "DisplayTime": "21:16"
+            }
+        ]
+    },
+    "Metros": null,
+    "Trains": {
+        "DpsTrain": [
+            {
+                "SiteId": 9525,
+                "StopAreaNumber": "0",
+                "TransportMode": "TRAIN",
+                "StopAreaName": "Tullinge",
+                "LineNumber": 36,
+                "Destination": "Märsta",
+                "TimeTabledDateTime": "2013-02-25T20:37:00",
+                "ExpectedDateTime": "2013-02-25T20:37:00",
+                "DisplayTime": "8 min",
+                "JourneyDirection": 2
+            },
+            {
+                "SiteId": 9525,
+                "StopAreaNumber": "0",
+                "TransportMode": "TRAIN",
+                "StopAreaName": "Tullinge",
+                "LineNumber": 36,
+                "Destination": "Märsta",
+                "TimeTabledDateTime": "2013-02-25T20:52:00",
+                "ExpectedDateTime": "2013-02-25T20:52:00",
+                "DisplayTime": "23 min",
+                "JourneyDirection": 2
+            },
+            {
+                "SiteId": 9525,
+                "StopAreaNumber": "0",
+                "TransportMode": "TRAIN",
+                "StopAreaName": "Tullinge",
+                "LineNumber": 36,
+                "Destination": "Märsta",
+                "TimeTabledDateTime": "2013-02-25T21:22:00",
+                "ExpectedDateTime": "2013-02-25T21:22:00",
+                "DisplayTime": "21:22",
+                "JourneyDirection": 2
+            },
+            {
+                "SiteId": 9525,
+                "StopAreaNumber": "0",
+                "TransportMode": "TRAIN",
+                "StopAreaName": "Tullinge",
+                "LineNumber": 36,
+                "Destination": "Södertälje centrum",
+                "TimeTabledDateTime": "2013-02-25T20:38:00",
+                "ExpectedDateTime": "2013-02-25T20:38:00",
+                "DisplayTime": "9 min",
+                "JourneyDirection": 1
+            },
+            {
+                "SiteId": 9525,
+                "StopAreaNumber": "0",
+                "TransportMode": "TRAIN",
+                "StopAreaName": "Tullinge",
+                "LineNumber": 36,
+                "Destination": "Södertälje centrum",
+                "TimeTabledDateTime": "2013-02-25T20:53:00",
+                "ExpectedDateTime": "2013-02-25T20:53:00",
+                "DisplayTime": "24 min",
+                "JourneyDirection": 1
+            },
+            {
+                "SiteId": 9525,
+                "StopAreaNumber": "0",
+                "TransportMode": "TRAIN",
+                "StopAreaName": "Tullinge",
+                "LineNumber": 36,
+                "Destination": "Södertälje centrum",
+                "TimeTabledDateTime": "2013-02-25T21:08:00",
+                "ExpectedDateTime": "2013-02-25T21:08:00",
+                "DisplayTime": "21:08",
+                "JourneyDirection": 1
+            },
+            {
+                "SiteId": 9525,
+                "StopAreaNumber": "0",
+                "TransportMode": "TRAIN",
+                "StopAreaName": "Tullinge",
+                "LineNumber": 36,
+                "Destination": "Södertälje centrum",
+                "TimeTabledDateTime": "2013-02-25T21:23:00",
+                "ExpectedDateTime": "2013-02-25T21:23:00",
+                "DisplayTime": "21:23",
+                "JourneyDirection": 1
+            }
+        ]
+    },
+    "Trams": null
+}}
