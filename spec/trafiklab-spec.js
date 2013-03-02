@@ -38,7 +38,7 @@ describe('trafiklab', function () {
         sl.clear();
         var file = fs.readFileSync('spec/huddinge.json', 'utf-8');
         var result = sl.extract(file);
-        var stop = result.trains[0].Stops[0];
+        var stop = result.trains[0][9527];
         expect(Object.keys(stop).length).toEqual(3);
         expect(stop.TimeTabledDateTime).toEqual('2013-01-02T13:17:00');
         expect(stop.ExpectedDateTime).toEqual('2013-01-02T13:17:19');
@@ -64,14 +64,27 @@ describe('trafiklab', function () {
         var result = sl.extract(fs.readFileSync('spec/ronninge.json', 'utf-8'));
         var trains = result.trains;
         expect(trains.length).toEqual(4);
-        expect(trains[0].Stops[0].ExpectedDateTime).toEqual('2013-02-20T07:47:00');
+        expect(trains[0][9523].ExpectedDateTime).toEqual('2013-02-20T07:47:00');
         assertStops([9523], result.stops);
 
         result = sl.extract(fs.readFileSync('spec/ostertalje.json', 'utf-8'));
         trains = result.trains;
         expect(trains.length).toEqual(4);
-        expect(trains[0].Stops[0].ExpectedDateTime).toEqual('2013-02-20T07:47:00');
-        expect(trains[0].Stops[1].ExpectedDateTime).toEqual('2013-02-20T07:52:00');
+        expect(trains[0][9523].ExpectedDateTime).toEqual('2013-02-20T07:47:00');
+        expect(trains[0][9522].ExpectedDateTime).toEqual('2013-02-20T07:52:00');
+        assertStops([9523, 9522], result.stops);
+    });
+
+    it('should overwrite stops', function () {
+        sl.clear();
+
+        var result = sl.extract(fs.readFileSync('spec/ronninge.json', 'utf-8'));
+        assertStops([9523], result.stops);
+
+        result = sl.extract(fs.readFileSync('spec/ostertalje.json', 'utf-8'));
+        assertStops([9523, 9522], result.stops);
+
+        result = sl.extract(fs.readFileSync('spec/ronninge.json', 'utf-8'));
         assertStops([9523, 9522], result.stops);
     });
 

@@ -11,31 +11,40 @@ function merge(state, newState) {
         return newState;
     }
 
-    _.each(state.trains, function (train, i) {
-        var newStop = newState.trains[i] ? newState.trains[i].Stops[0] : 'not found';
+    var newStop = newState.stops[0];
+    var newSiteId = newStop.SiteId;
 
-        train.Stops.push(newStop);
-        train.Stops.sort(function (a, b) {
-            return a.SiteId < b.SiteId;
-        });
-    });
-
-    function removeOld(siteId) {
-        for (var j = 0; j < state.stops.length; j++) {
-            if (state.stops[j].SiteId === siteId) {
-                state.stops.splice(j, 1);
-                return;
+    function getTrains() {
+        var r = [];
+        for (var i = 0; i < state.trains.length; i++) {
+            r[i] = state.trains[i];
+            var newTrain = newState.trains[i];
+            if (newTrain) {
+                r[i][newSiteId] = newTrain[newSiteId];
             }
+        }
+        return r;
+    }
+
+    function hasSiteId(id) {
+        return function (stop) {
+            return stop.SiteId === id;
         }
     }
 
-    removeOld(newState.stops[0].SiteId);
-    state.stops.push(newState.stops[0]);
-    state.stops.sort(function (a, b) {
-        return a.SiteId < b.SiteId;
-    });
+    function getStops() {
+        var r = _.reject(state.stops, hasSiteId(newSiteId));
+        r.push(newStop);
+        r.sort(function less(a, b) {
+            return a.SiteId < b.SiteId;
+        });
+        return r;
+    }
 
-    return state;
+    return {
+        trains: getTrains(),
+        stops: getStops()
+    };
 }
 
 exports.clear = function () {
@@ -82,7 +91,7 @@ exports.extract = function (html) {
             }
         }
 
-        train.Stops = [ stop ];
+        train[departure.SiteId] = stop;
 
         return train;
 
