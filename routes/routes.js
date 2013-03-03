@@ -28,6 +28,7 @@ exports.station = function (req, res) {
 };
 
 exports.clearCache = function (req, res) {
+    trafiklab.clear();
     res.render('clearCache', {
         title:'Cache cleared'
     })
