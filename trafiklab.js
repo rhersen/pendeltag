@@ -56,7 +56,7 @@ exports.extract = function (html) {
     var trains = parsed.DPS.Trains;
 
     function getStop(departure) {
-        var stop = {};
+        var stop = {LatestUpdate: parsed.DPS.LatestUpdate};
         for (var key in departure) {
             if (isStopProperty(key)) {
                 stop[key] = departure[key];

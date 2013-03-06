@@ -28,10 +28,11 @@ describe('trafiklab', function () {
         var file = fs.readFileSync('spec/huddinge.json', 'utf-8');
         var result = sl.extract(file);
         var stop = result.stops[0];
-        expect(Object.keys(stop).length).toEqual(3);
+        expect(Object.keys(stop).length).toEqual(4);
         expect(stop.SiteId).toEqual(9527);
         expect(stop.StopAreaNumber).toEqual('0');
         expect(stop.StopAreaName).toEqual('Huddinge');
+        expect(stop.LatestUpdate).toEqual('2013-01-02T13:15:23.5506461+01:00');
     });
 
     it('should return time fields', function () {
