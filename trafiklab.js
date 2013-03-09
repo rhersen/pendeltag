@@ -15,14 +15,24 @@ function merge(state, newState) {
     var newSiteId = newStop.SiteId;
 
     function getTrains() {
+        var i;
+        var olds = state.trains;
+        var news = newState.trains;
+
+        for (i = 0; olds.length < news.length; i++) {
+            olds.unshift(news[i]);
+        }
+
         var r = [];
-        for (var i = 0; i < state.trains.length; i++) {
-            r[i] = state.trains[i];
-            var newTrain = newState.trains[i];
-            if (newTrain) {
+
+        for (i = 0; i < olds.length; i++) {
+            r[i] = olds[i];
+            var newTrain = news[i];
+            if (r[i] && newTrain) {
                 r[i][newSiteId] = newTrain[newSiteId];
             }
         }
+
         return r;
     }
 
