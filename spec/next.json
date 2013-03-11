@@ -1,0 +1,108 @@
+{"DPS": {
+    "@xmlnsxsi": "http:\/\/www.w3.org\/2001\/XMLSchema-instance",
+    "@xmlnsxsd": "http:\/\/www.w3.org\/2001\/XMLSchema",
+    "@xmlns": "http:\/\/www1.sl.se\/realtidws\/",
+    "LatestUpdate": "2013-03-07T15:47:28.344059+01:00",
+    "ExecutionTime": "00:00:00.1562660",
+    "Trains": {
+        "DpsTrain": [
+            {
+                "SiteId": 9522,
+                "StopAreaNumber": "0",
+                "TransportMode": "TRAIN",
+                "StopAreaName": "Östertälje",
+                "LineNumber": 36,
+                "Destination": "Södertälje centrum",
+                "TimeTabledDateTime": "2013-03-07T15:52:00",
+                "ExpectedDateTime": "2013-03-07T15:52:00",
+                "DisplayTime": "4 min",
+                "JourneyDirection": 1
+            },
+            {
+                "SiteId": 9522,
+                "StopAreaNumber": "0",
+                "TransportMode": "TRAIN",
+                "StopAreaName": "Östertälje",
+                "LineNumber": 36,
+                "Destination": "Södertälje centrum",
+                "TimeTabledDateTime": "2013-03-07T16:07:00",
+                "ExpectedDateTime": "2013-03-07T16:14:16",
+                "DisplayTime": "26 min",
+                "JourneyDirection": 1
+            },
+            {
+                "SiteId": 9522,
+                "StopAreaNumber": "0",
+                "TransportMode": "TRAIN",
+                "StopAreaName": "Östertälje",
+                "LineNumber": 36,
+                "Destination": "Södertälje centrum",
+                "TimeTabledDateTime": "2013-03-07T16:22:00",
+                "ExpectedDateTime": "2013-03-07T16:22:00",
+                "DisplayTime": "16:22",
+                "JourneyDirection": 1
+            },
+            {
+                "SiteId": 9522,
+                "StopAreaNumber": "0",
+                "TransportMode": "TRAIN",
+                "StopAreaName": "Östertälje",
+                "LineNumber": 36,
+                "Destination": "Södertälje centrum",
+                "TimeTabledDateTime": "2013-03-07T16:37:00",
+                "ExpectedDateTime": "2013-03-07T16:37:00",
+                "DisplayTime": "16:37",
+                "JourneyDirection": 1
+            },
+            {
+                "SiteId": 9522,
+                "StopAreaNumber": "0",
+                "TransportMode": "TRAIN",
+                "StopAreaName": "Östertälje",
+                "LineNumber": 36,
+                "Destination": "Märsta",
+                "TimeTabledDateTime": "2013-03-07T15:53:00",
+                "ExpectedDateTime": "2013-03-07T15:53:00",
+                "DisplayTime": "5 min",
+                "JourneyDirection": 2
+            },
+            {
+                "SiteId": 9522,
+                "StopAreaNumber": "0",
+                "TransportMode": "TRAIN",
+                "StopAreaName": "Östertälje",
+                "LineNumber": 36,
+                "Destination": "Märsta",
+                "TimeTabledDateTime": "2013-03-07T16:08:00",
+                "ExpectedDateTime": "2013-03-07T16:08:00",
+                "DisplayTime": "20 min",
+                "JourneyDirection": 2
+            },
+            {
+                "SiteId": 9522,
+                "StopAreaNumber": "0",
+                "TransportMode": "TRAIN",
+                "StopAreaName": "Östertälje",
+                "LineNumber": 36,
+                "Destination": "Märsta",
+                "TimeTabledDateTime": "2013-03-07T16:23:00",
+                "ExpectedDateTime": "2013-03-07T16:23:00",
+                "DisplayTime": "16:23",
+                "JourneyDirection": 2
+            },
+            {
+                "SiteId": 9522,
+                "StopAreaNumber": "0",
+                "TransportMode": "TRAIN",
+                "StopAreaName": "Östertälje",
+                "LineNumber": 36,
+                "Destination": "Märsta",
+                "TimeTabledDateTime": "2013-03-07T16:38:00",
+                "ExpectedDateTime": "2013-03-07T16:38:00",
+                "DisplayTime": "16:38",
+                "JourneyDirection": 2
+            }
+        ]
+    },
+    "Trams": null
+}}

@@ -1,0 +1,132 @@
+{"DPS": {
+    "@xmlnsxsi": "http:\/\/www.w3.org\/2001\/XMLSchema-instance",
+    "@xmlnsxsd": "http:\/\/www.w3.org\/2001\/XMLSchema",
+    "@xmlns": "http:\/\/www1.sl.se\/realtidws\/",
+    "LatestUpdate": "2013-03-07T15:47:25.3124986+01:00",
+    "ExecutionTime": "00:00:00.1250128",
+    "Trains": {
+        "DpsTrain": [
+            {
+                "SiteId": 9523,
+                "StopAreaNumber": "0",
+                "TransportMode": "TRAIN",
+                "StopAreaName": "Rönninge",
+                "LineNumber": 36,
+                "Destination": "Södertälje centrum",
+                "TimeTabledDateTime": "2013-03-07T15:47:00",
+                "ExpectedDateTime": "2013-03-07T15:47:50",
+                "DisplayTime": "0 min",
+                "JourneyDirection": 1
+            },
+            {
+                "SiteId": 9523,
+                "StopAreaNumber": "0",
+                "TransportMode": "TRAIN",
+                "StopAreaName": "Rönninge",
+                "LineNumber": 36,
+                "Destination": "Södertälje centrum",
+                "TimeTabledDateTime": "2013-03-07T16:02:00",
+                "ExpectedDateTime": "2013-03-07T16:10:26",
+                "DisplayTime": "23 min",
+                "JourneyDirection": 1
+            },
+            {
+                "SiteId": 9523,
+                "StopAreaNumber": "0",
+                "TransportMode": "TRAIN",
+                "StopAreaName": "Rönninge",
+                "LineNumber": 36,
+                "Destination": "Södertälje centrum",
+                "TimeTabledDateTime": "2013-03-07T16:17:00",
+                "ExpectedDateTime": "2013-03-07T16:17:15",
+                "DisplayTime": "29 min",
+                "JourneyDirection": 1
+            },
+            {
+                "SiteId": 9523,
+                "StopAreaNumber": "0",
+                "TransportMode": "TRAIN",
+                "StopAreaName": "Rönninge",
+                "LineNumber": 36,
+                "Destination": "Södertälje centrum",
+                "TimeTabledDateTime": "2013-03-07T16:32:00",
+                "ExpectedDateTime": "2013-03-07T16:32:00",
+                "DisplayTime": "16:32",
+                "JourneyDirection": 1
+            },
+            {
+                "SiteId": 9523,
+                "StopAreaNumber": "0",
+                "TransportMode": "TRAIN",
+                "StopAreaName": "Rönninge",
+                "LineNumber": 36,
+                "Destination": "Södertälje centrum",
+                "TimeTabledDateTime": "2013-03-07T16:47:00",
+                "ExpectedDateTime": "2013-03-07T16:47:00",
+                "DisplayTime": "16:47",
+                "JourneyDirection": 1
+            },
+            {
+                "SiteId": 9523,
+                "StopAreaNumber": "0",
+                "TransportMode": "TRAIN",
+                "StopAreaName": "Rönninge",
+                "LineNumber": 36,
+                "Destination": "Upplands Väsby",
+                "TimeTabledDateTime": "2013-03-07T15:51:00",
+                "ExpectedDateTime": "2013-03-07T15:51:00",
+                "DisplayTime": "15:51",
+                "JourneyDirection": 2
+            },
+            {
+                "SiteId": 9523,
+                "StopAreaNumber": "0",
+                "TransportMode": "TRAIN",
+                "StopAreaName": "Rönninge",
+                "LineNumber": 36,
+                "Destination": "Märsta",
+                "TimeTabledDateTime": "2013-03-07T15:58:00",
+                "ExpectedDateTime": "2013-03-07T15:58:00",
+                "DisplayTime": "10 min",
+                "JourneyDirection": 2
+            },
+            {
+                "SiteId": 9523,
+                "StopAreaNumber": "0",
+                "TransportMode": "TRAIN",
+                "StopAreaName": "Rönninge",
+                "LineNumber": 36,
+                "Destination": "Märsta",
+                "TimeTabledDateTime": "2013-03-07T16:13:00",
+                "ExpectedDateTime": "2013-03-07T16:13:00",
+                "DisplayTime": "25 min",
+                "JourneyDirection": 2
+            },
+            {
+                "SiteId": 9523,
+                "StopAreaNumber": "0",
+                "TransportMode": "TRAIN",
+                "StopAreaName": "Rönninge",
+                "LineNumber": 36,
+                "Destination": "Märsta",
+                "TimeTabledDateTime": "2013-03-07T16:28:00",
+                "ExpectedDateTime": "2013-03-07T16:28:00",
+                "DisplayTime": "16:28",
+                "JourneyDirection": 2
+            },
+            {
+                "SiteId": 9523,
+                "StopAreaNumber": "0",
+                "TransportMode": "TRAIN",
+                "StopAreaName": "Rönninge",
+                "LineNumber": 36,
+                "Destination": "Märsta",
+                "TimeTabledDateTime": "2013-03-07T16:43:00",
+                "ExpectedDateTime": "2013-03-07T16:43:00",
+                "DisplayTime": "16:43",
+                "JourneyDirection": 2
+            }
+        ]
+    },
+    "Trams": null
+}}

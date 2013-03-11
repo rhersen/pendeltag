@@ -109,6 +109,26 @@ describe('trafiklab', function () {
         expect(trains[4][9523].ExpectedDateTime).toEqual('2013-03-07T16:47:00');
     });
 
+    it('should add previous stop with more trains', function () {
+        sl.clear();
+
+        var result = sl.extract(fs.readFileSync('spec/next.json', 'utf-8'));
+        var trains = result.trains;
+        expect(trains.length).toEqual(4);
+        assertStops([9522], result.stops);
+
+        result = sl.extract(fs.readFileSync('spec/curr.json', 'utf-8'));
+        trains = result.trains;
+        expect(trains.length).toEqual(5);
+        assertStops([9523, 9522], result.stops);
+
+        expect(trains[0][9523].ExpectedDateTime).toEqual('2013-03-07T15:47:50');
+        expect(trains[0][9522].ExpectedDateTime).toEqual('2013-03-07T15:52:00');
+        expect(trains[3][9523].ExpectedDateTime).toEqual('2013-03-07T16:32:00');
+        expect(trains[3][9522].ExpectedDateTime).toEqual('2013-03-07T16:37:00');
+        expect(trains[4][9523].ExpectedDateTime).toEqual('2013-03-07T16:47:00');
+    });
+
     it('should add next stop with more trains', function () {
         sl.clear();
 
@@ -122,7 +142,34 @@ describe('trafiklab', function () {
         expect(trains.length).toEqual(5);
         assertStops([9524, 9523], result.stops);
 
-        expect(trains[0].ExpectedDateTime).toEqual(undefined);
+        expect(trains[0][9524]).toEqual(undefined);
+        expect(trains[0][9523].ExpectedDateTime).toEqual('2013-03-07T15:47:50');
+        expect(trains[1][9524].ExpectedDateTime).toEqual('2013-03-07T16:06:59');
+        expect(trains[1][9523].ExpectedDateTime).toEqual('2013-03-07T16:10:26');
+        expect(trains[3][9524].ExpectedDateTime).toEqual('2013-03-07T16:27:00');
+        expect(trains[3][9523].ExpectedDateTime).toEqual('2013-03-07T16:32:00');
+        expect(trains[4][9524].ExpectedDateTime).toEqual('2013-03-07T16:42:49');
+        expect(trains[4][9523].ExpectedDateTime).toEqual('2013-03-07T16:47:00');
+    });
+
+    it('should add previous stop with fewer trains', function () {
+        sl.clear();
+
+        var result = sl.extract(fs.readFileSync('spec/curr.json', 'utf-8'));
+        var trains = result.trains;
+        expect(trains.length).toEqual(5);
+        assertStops([9523], result.stops);
+        expect(trains[0][9523].ExpectedDateTime).toEqual('2013-03-07T15:47:50');
+        expect(trains[1][9523].ExpectedDateTime).toEqual('2013-03-07T16:10:26');
+        expect(trains[3][9523].ExpectedDateTime).toEqual('2013-03-07T16:32:00');
+        expect(trains[4][9523].ExpectedDateTime).toEqual('2013-03-07T16:47:00');
+
+        result = sl.extract(fs.readFileSync('spec/prev.json', 'utf-8'));
+        trains = result.trains;
+        expect(trains.length).toEqual(5);
+        assertStops([9524, 9523], result.stops);
+
+        expect(trains[0][9524]).toEqual(undefined);
         expect(trains[0][9523].ExpectedDateTime).toEqual('2013-03-07T15:47:50');
         expect(trains[1][9524].ExpectedDateTime).toEqual('2013-03-07T16:06:59');
         expect(trains[1][9523].ExpectedDateTime).toEqual('2013-03-07T16:10:26');

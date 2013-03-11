@@ -14,22 +14,49 @@ function merge(state, newState) {
     var newStop = newState.stops[0];
     var newSiteId = newStop.SiteId;
 
+    function getAlignment(olds, news, id) {
+        var prev = id + 1;
+        var next = id - 1;
+        if (olds[0][prev]) {
+            return news[0][id].ExpectedDateTime > olds[0][prev].ExpectedDateTime ? 0 : 1;
+        } else if (olds[0][next]) {
+            return news[0][id].ExpectedDateTime < olds[0][next].ExpectedDateTime ? 0 : -1;
+        } else {
+            return 1;
+        }
+    }
+
     function getTrains() {
         var i;
         var olds = state.trains;
         var news = newState.trains;
-
-        for (i = 0; olds.length < news.length; i++) {
-            olds.unshift(news[i]);
-        }
-
         var r = [];
-
-        for (i = 0; i < olds.length; i++) {
-            r[i] = olds[i];
-            var newTrain = news[i];
-            if (r[i] && newTrain) {
-                r[i][newSiteId] = newTrain[newSiteId];
+        var alignment = getAlignment(olds, news, newSiteId);
+        if (alignment === 0) {
+            for (i = 0; i < olds.length; i++) {
+                r.push(olds[i]);
+                if (news[i]) {
+                    r[i][newSiteId] = news[i][newSiteId];
+                }
+            }
+            for (; i < news.length; i++) {
+                r.push(news[i]);
+            }
+        } else if (alignment > 0) {
+            for (i = 0; i < news.length; i++) {
+                if (i < alignment) {
+                    r.push(news[i]);
+                } else {
+                    r.push(olds[i - alignment]);
+                    r[i][newSiteId] = news[i][newSiteId];
+                }
+            }
+        } else {
+            for (i = 0; i < olds.length; i++) {
+                r.push(olds[i]);
+                if (i >= -alignment) {
+                    r[i][newSiteId] = news[i + alignment][newSiteId];
+                }
             }
         }
 
@@ -66,8 +93,9 @@ exports.extract = function (html) {
     var trains = parsed.DPS.Trains;
 
     function getStop(departure) {
+        var key;
         var stop = {LatestUpdate: parsed.DPS.LatestUpdate};
-        for (var key in departure) {
+        for (key in departure) {
             if (isStopProperty(key)) {
                 stop[key] = departure[key];
             }
@@ -90,10 +118,11 @@ exports.extract = function (html) {
     }
 
     function createTrain(departure) {
+        var key;
         var stop = { };
         var train = { };
 
-        for (var key in departure) {
+        for (key in departure) {
             if (isTrainProperty(key)) {
                 train[key] = departure[key];
             } else if (!isStopProperty(key)) {
