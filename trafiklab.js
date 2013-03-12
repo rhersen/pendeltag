@@ -14,16 +14,36 @@ function merge(state, newState) {
     var newStop = newState.stops[0];
     var newSiteId = newStop.SiteId;
 
+    function hasStation(trains, id) {
+        return getIndex(trains, id) !== undefined;
+    }
+
+    function getIndex(trains, id) {
+        for (var i = 0; i < trains.length; i++) {
+            if (trains[i][id]) {
+                return i;
+            }
+        }
+
+        return undefined;
+    }
+
     function getAlignment(olds, news, id) {
+        var defined;
         var prev = id + 1;
         var next = id - 1;
-        if (olds[0][prev]) {
-            return news[0][id].ExpectedDateTime > olds[0][prev].ExpectedDateTime ? 0 : 1;
-        } else if (olds[0][next]) {
-            return news[0][id].ExpectedDateTime < olds[0][next].ExpectedDateTime ? 0 : -1;
-        } else {
-            return 1;
+
+        if (hasStation(olds, prev)) {
+            defined = getIndex(olds, prev);
+            return news[defined][id].ExpectedDateTime > olds[defined][prev].ExpectedDateTime ? 0 : 1;
         }
+
+        if (hasStation(olds, next)) {
+            defined = getIndex(olds, next);
+            return news[defined][id].ExpectedDateTime < olds[defined][next].ExpectedDateTime ? 0 : -1;
+        }
+
+        return 1;
     }
 
     function getTrains() {
