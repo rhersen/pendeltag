@@ -52,17 +52,7 @@ function merge(state, newState) {
         var news = newState.trains;
         var r = [];
         var alignment = getAlignment(olds, news, newSiteId);
-        if (alignment === 0) {
-            for (i = 0; i < olds.length; i++) {
-                r.push(olds[i]);
-                if (news[i]) {
-                    r[i][newSiteId] = news[i][newSiteId];
-                }
-            }
-            for (; i < news.length; i++) {
-                r.push(news[i]);
-            }
-        } else if (alignment > 0) {
+        if (alignment > 0) {
             for (i = 0; i < news.length; i++) {
                 if (i < alignment) {
                     r.push(news[i]);
@@ -74,9 +64,12 @@ function merge(state, newState) {
         } else {
             for (i = 0; i < olds.length; i++) {
                 r.push(olds[i]);
-                if (i >= -alignment) {
+                if (news[i + alignment] && i >= -alignment) {
                     r[i][newSiteId] = news[i + alignment][newSiteId];
                 }
+            }
+            for (; i < news.length; i++) {
+                r.push(news[i]);
             }
         }
 
