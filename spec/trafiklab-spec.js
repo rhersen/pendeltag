@@ -41,4 +41,10 @@ describe('trafiklab', function () {
         expect(result.length).toEqual(1);
     });
 
+    it('should handle response without trains', function () {
+        var file = fs.readFileSync('spec/no-trains.json', 'utf-8');
+        var result = sl.extract(file);
+        expect(result.length).toEqual(1);
+    });
+
 });

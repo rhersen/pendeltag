@@ -3,12 +3,19 @@ var key = require('./key');
 var trainKeys = ['Destination', 'LineNumber', 'JourneyDirection', 'TransportMode'];
 
 exports.extract = function (html) {
-    var parsed = JSON.parse(html);
-    var trains = parsed.DPS.Trains;
+    var trains = getTrains(JSON.parse(html).DPS.Trains);
 
-    return trains ? trains.DpsTrain.map(createTrain) : [
+    return trains ? trains.map(createTrain) : [
         {SiteId: 9001, StopAreaName: '?'}
     ];
+
+    function getTrains(trains) {
+        if (trains && Array.isArray(trains.DpsTrain)) {
+            return trains.DpsTrain;
+        } else {
+            return undefined;
+        }
+    }
 
     function createTrain(departure) {
         var stop = { };
